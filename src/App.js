@@ -1,5 +1,6 @@
 import { Route, BrowserRouter as Router } from "react-router-dom";
 import Home from "./pages/Home";
+import "../src/style/common.css";
 
 function App() {
   return (

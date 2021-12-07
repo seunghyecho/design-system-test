@@ -9,11 +9,17 @@ import {
 } from "@flescompany/design-system";
 import styled from "styled-components";
 import carousel01 from "../assets/carousel01.png";
+import mainFree from "../assets/m_main_free.png";
+import mainOrient from "../assets/m_main_orient.png";
+import mainLife from "../assets/m_main_life.png";
+import mainTheme from "../assets/m_main_theme.png";
+import mainYears from "../assets/m_main_years.png";
+import mainWest from "../assets/m_main_west.png";
 
 const Container = styled.div``;
 export default function Body() {
   return (
-    <Container>
+    <Container id="home">
       <div id="home_luckBar">
         <InlineLink
           backgroundColor="#ff9900"
@@ -26,6 +32,7 @@ export default function Body() {
         <CarouselInTextImg
           title="타로 운세가 1회 무료"
           upperTitle="유료운세를 무료로!"
+          lowerTitle=""
           backgroundColor="#ff9900"
           color="#ffffff"
           onClickBullets={function noRefCheck() {}}
@@ -37,13 +44,12 @@ export default function Body() {
           ]}
         />
       </div>
-
-      <div id="home_hashtag">
+      <div id="home_hashtag" className="anchor_style">
         <ArticleTitle
-          action="ACTION BUTTON"
+          action="더보기"
           onClick={function noRefCheck() {}}
-          subTitle="SUB TITLE"
-          title="TITLE"
+          subTitle=""
+          title="해시태그"
         />
         <ButtonGroup
           buttonArr={["Menu1", "Menu2", "Menu3", "Menu4"]}
@@ -52,21 +58,38 @@ export default function Body() {
         />
       </div>
       <div id="home_luckBtn">
-        <InlineLink onClick={function noRefCheck() {}} />
         <Grid
           grids={[
-            "gridItem1",
-            "gridItem2",
-            "gridItem3",
-            "gridItem4",
-            "gridItem5",
-            "gridItem6",
+            {
+              name: "무료할인",
+              url: `${mainFree}`,
+            },
+            {
+              name: "동양운세",
+              url: `${mainOrient}`,
+            },
+            {
+              name: "생활운세",
+              url: `${mainLife}`,
+            },
+            {
+              name: "인기테마",
+              url: `${mainTheme}`,
+            },
+            {
+              name: "월간신년",
+              url: `${mainYears}`,
+            },
+            {
+              name: "서양운세",
+              url: `${mainWest}`,
+            },
           ]}
-          onGrid={function noRefCheck() {}}
+          onGrid={() => {}}
           width="3"
         />
       </div>
-      <div id="home_luckList">
+      <div id="home_luckList" className="anchor_style">
         <ArticleTitle
           action="ACTION BUTTON"
           onClick={function noRefCheck() {}}
@@ -91,7 +114,7 @@ export default function Body() {
           onClick={function noRefCheck() {}}
         />
       </div>
-      <div id="home_themeList">
+      <div id="home_themeList" className="anchor_style">
         <ArticleTitle
           action="ACTION BUTTON"
           onClick={function noRefCheck() {}}

@@ -1,6 +1,6 @@
-import { Header, Footer } from "@flescompany/design-system";
-import Body from "./Body.js";
 import styled from "styled-components";
+import Body from "./Body.js";
+import { Header, Footer } from "@flescompany/design-system";
 import tLogo from "../assets/t_logo.png";
 
 const Container = styled.div``;

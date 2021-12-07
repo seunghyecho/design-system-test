@@ -11,17 +11,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
-header > * {
-  padding: 0.5rem 0 !important;
-}
-header #logo {
-  width: 68px;
-  overflow: hidden;
-}
-#home_carousel {
-  height: 200px;
-}
-#home_carousel > * {
-  height: inherit !important;
-}
