@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="menu" width="48" height="48" viewBox="0 0 48 48">
+    <defs>
+        <style>
+            .cls-2{fill:none;stroke:#000;stroke-linejoin:round}
+        </style>
+    </defs>
+    <path id="사각형_1069" fill="rgba(255,255,255,0)" d="M0 0H48V48H0z"/>
+    <g id="그룹_16763" transform="translate(12 11.939)">
+        <path id="선_139" d="M0 0L18 0" class="cls-2" transform="translate(3 12.061)"/>
+        <path id="선_140" d="M0 0L18 0" class="cls-2" transform="translate(3 7.061)"/>
+        <path id="선_141" d="M0 0L18 0" class="cls-2" transform="translate(3 17.061)"/>
+    </g>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="search" width="48" height="48" viewBox="0 0 48 48">
+    <defs>
+        <style>
+            .cls-2{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round}
+        </style>
+    </defs>
+    <path id="사각형_1070" fill="rgba(255,255,255,0)" d="M0 0H48V48H0z"/>
+    <g id="그룹_16764" transform="translate(12 12)">
+        <circle id="타원_649" cx="8" cy="8" r="8" class="cls-2" transform="translate(3 3)"/>
+        <path id="선_138" d="M4.35 4.35L0 0" class="cls-2" transform="translate(16.65 16.65)"/>
+    </g>
+</svg>
