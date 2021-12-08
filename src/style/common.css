@@ -1,3 +1,12 @@
+/* common */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 9;
+  background: white;
+}
 header > * {
   padding: 0.5rem 0 !important;
 }
@@ -5,28 +14,55 @@ header #logo {
   width: 68px;
   overflow: hidden;
 }
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 9;
+  background: white;
+  border-top: 2px solid #eee;
+}
+/* home */
+#home {
+  padding-top: 60px;
+}
 #home #home_carousel {
   height: 200px;
 }
 #home #home_carousel > * {
   height: inherit !important;
 }
+#home #home_contents,
 #home #home_hashtag,
-#home #home_luckBtn {
-  padding: 50px 0;
+#home #home_luckMenu {
+  padding-top: 12px;
+  padding-bottom: 12px;
   position: relative;
 }
-#home #home_hashtag::after {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 10px;
-  opacity: 0.5;
-  background-color: #f9f9f9;
+#home #home_hashtag,
+#home #home_luckMenu,
+#home #home_luckList,
+#home #home_themeList,
+#home #home_freeList {
+  padding-top: 28px;
+  padding-bottom: 28px;
+  border-bottom: 10px solid #f9f9f9;
 }
 #home .articleTitle > a {
   color: #ff9900;
+}
+#home #home_contents,
+#home #home_hashtag,
+#home #home_luckMenu,
+#home #home_luckList,
+#home #home_themeList,
+#home #home_freeList,
+#home #home_hotList {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+#home #home_hotList {
+  padding-top: 28px;
+  padding-bottom: 28px;
 }

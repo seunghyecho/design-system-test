@@ -15,6 +15,7 @@ import mainLife from "../assets/m_main_life.png";
 import mainTheme from "../assets/m_main_theme.png";
 import mainYears from "../assets/m_main_years.png";
 import mainWest from "../assets/m_main_west.png";
+import noImage from "../assets/no_image.jpeg";
 
 const Container = styled.div``;
 export default function Body() {
@@ -22,7 +23,7 @@ export default function Body() {
     <Container id="home">
       <div id="home_luckBar">
         <InlineLink
-          backgroundColor="#ff9900"
+          backgroundColor="#ffb74b"
           color="#ffffff"
           label="오늘의 운세"
           onClick={function noRefCheck() {}}
@@ -44,45 +45,69 @@ export default function Body() {
           ]}
         />
       </div>
-      <div id="home_hashtag" className="anchor_style">
+      <div id="home_contents" className="anchor_style">
         <ArticleTitle
           action="더보기"
           onClick={function noRefCheck() {}}
-          subTitle=""
-          title="해시태그"
+          subTitle="(39개의 테마)"
+          title="고민없이 컨텐츠 찾기"
         />
         <ButtonGroup
           buttonArr={["Menu1", "Menu2", "Menu3", "Menu4"]}
           onClick={function noRefCheck() {}}
+          width="quarter"
+        />
+      </div>
+      <div id="home_hashtag" className="anchor_style">
+        <ArticleTitle
+          action="수정하기"
+          onClick={function noRefCheck() {}}
+          subTitle="(10개의 해시태그)"
+          title="관심 태그"
+        />
+        <ButtonGroup
+          buttonArr={[
+            "Menu0",
+            "Menu1",
+            "Menu2",
+            "Menu3",
+            "Menu4",
+            "Menu5",
+            "Menu6",
+            "Menu7",
+            "Menu8",
+            "Menu9",
+          ]}
+          onClick={function noRefCheck() {}}
           width="auto"
         />
       </div>
-      <div id="home_luckBtn">
+      <div id="home_luckMenu">
         <Grid
           grids={[
             {
-              name: "무료할인",
               url: `${mainFree}`,
+              name: "무료할인",
             },
             {
-              name: "동양운세",
               url: `${mainOrient}`,
+              name: "동양운세",
             },
             {
-              name: "생활운세",
               url: `${mainLife}`,
+              name: "생활운세",
             },
             {
-              name: "인기테마",
               url: `${mainTheme}`,
+              name: "인기테마",
             },
             {
-              name: "월간신년",
               url: `${mainYears}`,
+              name: "월간신년",
             },
             {
-              name: "서양운세",
               url: `${mainWest}`,
+              name: "서양운세",
             },
           ]}
           onGrid={() => {}}
@@ -91,24 +116,26 @@ export default function Body() {
       </div>
       <div id="home_luckList" className="anchor_style">
         <ArticleTitle
-          action="ACTION BUTTON"
+          action="더보기"
           onClick={function noRefCheck() {}}
-          subTitle="SUB TITLE"
-          title="TITLE"
+          subTitle=""
+          title="오늘의 운세"
         />
         <ListThemeHighlight
           listArr={[
             {
+              img: `${noImage}`,
               accumulateCoin: 9999,
               coin: 999,
-              listSubTitle: "listSubTitle",
-              listTitle: "listTitle",
+              listSubTitle: "한국 전통운세 비결로 보는 오늘의 운세",
+              listTitle: "오늘의 운세",
             },
             {
+              img: `${noImage}`,
               accumulateCoin: 9999,
               coin: 999,
-              listSubTitle: "listSubTitle",
-              listTitle: "listTitle",
+              listSubTitle: "한국 전통운세 비결로 보는 오늘의 운세",
+              listTitle: "오늘의 운세",
             },
           ]}
           onClick={function noRefCheck() {}}
@@ -116,34 +143,43 @@ export default function Body() {
       </div>
       <div id="home_themeList" className="anchor_style">
         <ArticleTitle
-          action="ACTION BUTTON"
+          action="더보기"
           onClick={function noRefCheck() {}}
-          subTitle="SUB TITLE"
-          title="TITLE"
+          subTitle=""
+          title="많이 보는 테마"
         />
         <ListThemeTag
           listArr={[
             {
-              listSubTitle: "List SubTitle",
-              listTitle: "List Title",
+              listSubTitle: "그 사람에게 나의 잔삼울 어떻게 전달...",
+              listTitle: "#내 마음을 받아줘",
+              commentTagNum: 999,
+              heartTagNum: 999,
+              img: `${noImage}`,
             },
             {
-              listSubTitle: "List SubTitle",
-              listTitle: "List Title",
+              listSubTitle: "그 사람에게 나의 잔삼울 어떻게 전달...",
+              listTitle: "#내 마음을 받아줘",
+              commentTagNum: 999,
+              heartTagNum: 999,
+              img: `${noImage}`,
             },
             {
-              listSubTitle: "List SubTitle",
-              listTitle: "List Title",
+              listSubTitle: "그 사람에게 나의 잔삼울 어떻게 전달...",
+              listTitle: "#내 마음을 받아줘",
+              commentTagNum: 999,
+              heartTagNum: 999,
+              img: `${noImage}`,
             },
           ]}
         />
       </div>
       <div id="home_freeList">
         <ArticleTitle
-          action="ACTION BUTTON"
+          action="더보기"
           onClick={function noRefCheck() {}}
-          subTitle="SUB TITLE"
-          title="TITLE"
+          subTitle=""
+          title="유료운세가 1회 무료"
         />
         <ListThemeHighlight
           listArr={[
@@ -152,12 +188,14 @@ export default function Body() {
               coin: 999,
               listSubTitle: "listSubTitle",
               listTitle: "listTitle",
+              img: `${noImage}`,
             },
             {
               accumulateCoin: 9999,
               coin: 999,
               listSubTitle: "listSubTitle",
               listTitle: "listTitle",
+              img: `${noImage}`,
             },
           ]}
           onClick={function noRefCheck() {}}
@@ -165,10 +203,10 @@ export default function Body() {
       </div>
       <div id="home_hotList">
         <ArticleTitle
-          action="ACTION BUTTON"
+          action="더보기"
           onClick={function noRefCheck() {}}
-          subTitle="SUB TITLE"
-          title="TITLE"
+          subTitle=""
+          title="주목! 요즘 뜨는 운세"
         />
         <ListThemeHighlight
           listArr={[
@@ -177,12 +215,14 @@ export default function Body() {
               coin: 999,
               listSubTitle: "listSubTitle",
               listTitle: "listTitle",
+              img: `${noImage}`,
             },
             {
               accumulateCoin: 9999,
               coin: 999,
               listSubTitle: "listSubTitle",
               listTitle: "listTitle",
+              img: `${noImage}`,
             },
           ]}
           onClick={function noRefCheck() {}}
