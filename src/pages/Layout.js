@@ -17,7 +17,7 @@ import wishOn from "../assets/on_wish.svg";
 
 const Container = styled.div``;
 
-function Home() {
+function Layout() {
   return (
     <Container>
       <Header titleUrl={tLogo} />
@@ -65,4 +65,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Layout;

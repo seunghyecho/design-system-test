@@ -1,5 +1,5 @@
 import { Route, BrowserRouter as Router } from "react-router-dom";
-import Home from "./pages/Home";
+import Layout from "./pages/Layout";
 import "../src/style/common.css";
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
     <>
       <Router>
         <div className="App">
-          <Route exact path="/" component={Home} />
+          <Route exact path="/" component={Layout} />
         </div>
       </Router>
     </>
