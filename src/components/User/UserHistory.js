@@ -54,35 +54,39 @@ export default function UserHistory() {
         <Header></Header>
       </UserHistoryHeader>
       <UserHistoryContent className="UserHistory--content">
-        <Card
-          backgroundColor="#f9f9f9"
-          contents="자주 보는 운세를 북마크 해두시고 \n 편하게 이용하세요."
-          position="center"
-          textAlign="center"
-          title=""
-        />
-        <ListThemeHighlight
-          isDisableBtn
-          listArr={[
-            {
-              accumulateCoin: 9999,
-              buttonArr: ["#연관태그", "#연관태그", "#연관태그"],
-              coin: 999,
-              img: `${noImage}`,
-              listSubTitle: "listSubTitle",
-              listTitle: "listTitle",
-            },
-            {
-              accumulateCoin: 9999,
-              buttonArr: ["#연관태그", "#연관태그", "#연관태그"],
-              coin: 999,
-              img: `${noImage}`,
-              listSubTitle: "listSubTitle",
-              listTitle: "listTitle",
-            },
-          ]}
-          onClick={() => {}}
-        />
+        <div id="UserHistory--card">
+          <Card
+            backgroundColor="#f9f9f9"
+            contents="자주 보는 운세를 북마크 해두시고 \n 편하게 이용하세요."
+            position="center"
+            textAlign="center"
+            title=""
+          />
+        </div>
+        <div id="UserHistory--list">
+          <ListThemeHighlight
+            isDisableBtn
+            listArr={[
+              {
+                accumulateCoin: 9999,
+                buttonArr: ["#연관태그", "#연관태그", "#연관태그"],
+                coin: 999,
+                img: `${noImage}`,
+                listSubTitle: "listSubTitle",
+                listTitle: "listTitle",
+              },
+              {
+                accumulateCoin: 9999,
+                buttonArr: ["#연관태그", "#연관태그", "#연관태그"],
+                coin: 999,
+                img: `${noImage}`,
+                listSubTitle: "listSubTitle",
+                listTitle: "listTitle",
+              },
+            ]}
+            onClick={() => {}}
+          />
+        </div>
       </UserHistoryContent>
     </Container>
   );

@@ -15,16 +15,16 @@ const UserinfoHeader = styled.div`
 `;
 const Header = styled.h1`
   color: #222;
-  font-size: 24px;
+  font-size: ${({ theme }) => theme.fontSizes.xxxl};
 `;
 const Ptext = styled.p`
   margin-bottom: 10px;
-  font-size: 12px;
-  font-weight: bold;
+  font-size: ${({ theme }) => theme.fontSizes.small};
+  font-weight: ${({ theme }) => theme.fontWeights.bold};
 `;
 const Span = styled.span`
-  color: #222;
-  font-weight: bold;
+  color: ${({ theme }) => theme.colors.gray22};
+  font-weight: ${({ theme }) => theme.fontWeights.bold};
 `;
 const UserinfoContent = styled.div`
   padding: 10px 0;
@@ -32,12 +32,11 @@ const UserinfoContent = styled.div`
 const Form = styled.form`
   > div {
     margin: 30px 0;
-
     :first-of-type {
       margin: 0;
     }
   }
-  .select--interest {
+  .Userinfo--interest {
     > * {
       margin: 20px 0;
     }
@@ -47,15 +46,14 @@ const Form = styled.form`
   .select--full {
     height: 50px;
   }
-  .checkbox--policy {
+  .Userinfo--policy {
     span {
-      font-size: 12px;
-      font-weight: 500;
+      font-size: ${({ theme }) => theme.fontSizes.small};
+      font-weight: ${({ theme }) => theme.fontWeights.regular};
     }
   }
-  .button--confirm {
+  .Userinfo--confirm {
     width: 100%;
-
     .outline,
     .borderRadius5 {
       width: 100%;
@@ -68,14 +66,14 @@ const Form = styled.form`
 export default function Userinfo() {
   return (
     <Container id="Userinfo">
-      <UserinfoHeader className="userinfo--header">
+      <UserinfoHeader className="Userinfo--header">
         <Header>
           <Span>사주정보</Span>를 입력해주세요
         </Header>
       </UserinfoHeader>
-      <UserinfoContent className="userinfo--content">
+      <UserinfoContent className="Userinfo--content">
         <Form>
-          <div className="inputWithSelect--name">
+          <div className="Userinfo--name">
             <Ptext>이름(성별)</Ptext>
             <InputWithSelect
               borderColor="#eeeeee"
@@ -96,7 +94,7 @@ export default function Userinfo() {
               ]}
             />
           </div>
-          <div className="inputWithSelect--birth">
+          <div className="Userinfo--birth">
             <Ptext>생년월일</Ptext>
             <InputWithSelect
               borderColor="#eeeeee"
@@ -117,7 +115,7 @@ export default function Userinfo() {
               ]}
             />
           </div>
-          <div className="inputWithLabel--time">
+          <div className="Userinfo--time">
             <InputWithLabel
               id="time"
               label="태어난 시"
@@ -126,7 +124,7 @@ export default function Userinfo() {
               error=""
             />
           </div>
-          <div className="select--married">
+          <div className="Userinfo--married">
             <Ptext>결혼여부</Ptext>
             <Select
               className="full"
@@ -154,7 +152,7 @@ export default function Userinfo() {
               state="full"
             />
           </div>
-          <div className="select--interest">
+          <div className="Userinfo--interest">
             <Ptext>관심키워드</Ptext>
             <Select
               className="full"
@@ -196,7 +194,7 @@ export default function Userinfo() {
               state="full"
             />
           </div>
-          <div className="checkbox--policy">
+          <div className="Userinfo--policy">
             <Checkbox
               checked
               label="운세서비스 이용을 위한 개인정보제공동의서 (필수)"
@@ -204,7 +202,7 @@ export default function Userinfo() {
               onChange={() => {}}
             />
           </div>
-          <div className="button--confirm">
+          <div className="Userinfo--confirm">
             <Button appearance="borderRadius5" label="확인" />
           </div>
         </Form>
