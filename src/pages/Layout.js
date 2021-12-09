@@ -1,26 +1,27 @@
-import styled from "styled-components";
-import Body from "./Body.js";
 import { Header, Footer } from "@flescompany/design-system";
-import tLogo from "../assets/t_logo.png";
+import Body from "./Body.js";
 
+import tLogo from "../assets/t_logo.png";
 import homeOff from "../assets/off_home.svg";
 import userOff from "../assets/off_user.svg";
 import cashOff from "../assets/off_cash.svg";
 import settingsOff from "../assets/off_settings.svg";
 import wishOff from "../assets/off_wish.svg";
-
 import homeOn from "../assets/on_home.svg";
 import userOn from "../assets/on_user.svg";
 import cashOn from "../assets/on_cash.svg";
 import settingsOn from "../assets/on_settings.svg";
 import wishOn from "../assets/on_wish.svg";
 
-const Container = styled.div``;
-
-function Layout() {
+export default function Layout() {
   return (
-    <Container>
-      <Header titleUrl={tLogo} />
+    <>
+      <Header
+        titleUrl={tLogo}
+        onMenu={() => {}}
+        onSearch={() => {}}
+        onCreateAccount={() => {}}
+      />
       <Body />
       <Footer
         footers={[
@@ -61,8 +62,6 @@ function Layout() {
           },
         ]}
       />
-    </Container>
+    </>
   );
 }
-
-export default Layout;

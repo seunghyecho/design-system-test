@@ -24,11 +24,11 @@ footer {
   background-color: #ffffff;
   box-shadow: 0 -3px 3px 0 rgba(0, 0, 0, 0.05);
 }
-/* home */
-#home {
-  padding-top: 60px;
-  padding-bottom: 60px;
+#body {
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
+/* home */
 #home #home_carousel {
   height: 200px;
 }
@@ -51,9 +51,6 @@ footer {
   padding-bottom: 28px;
   border-bottom: 10px solid #f9f9f9;
 }
-#home .articleTitle > a {
-  color: #ff9900;
-}
 #home #home_contents,
 #home #home_hashtag,
 #home #home_luckMenu,
@@ -67,4 +64,7 @@ footer {
 #home #home_hotList {
   padding-top: 28px;
   padding-bottom: 28px;
+}
+#home .articleTitle > a {
+  color: #ff9900;
 }
