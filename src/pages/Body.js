@@ -1,13 +1,9 @@
-import Home from "../components/Home";
-import Userinfo from "../components/UserInfo";
-import UserMsg from "../components/UserMsg";
+import CashCharge from "../components/Cash/CashCharge";
 
 export default function Body() {
   return (
     <div id="body">
-      <UserMsg />
-      <Userinfo />
-      <Home />
+      <CashCharge />
     </div>
   );
 }
