@@ -1,6 +1,7 @@
 import {
   BannerInTextAndImg,
   Card,
+  CardNumber,
   CheckedValue,
   ButtonGroup,
   Button,
@@ -51,6 +52,28 @@ const CashChargeContent = styled.div`
       background-color: #ffb74b;
     }
   }
+
+  #CashCharge--card {
+    .cardNumber {
+      min-height: 80px;
+
+      > :first-child {
+        h1 {
+          padding: 0;
+        }
+        min-height: 0;
+      }
+      > :last-child {
+        min-height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        p {
+          font-size: 12px;
+        }
+      }
+    }
+  }
 `;
 const Form = styled.form`
   > * {
@@ -88,11 +111,13 @@ export default function CashCharge() {
         <Form>
           <div id="CashCharge--card">
             <Ptext>남은 잔액</Ptext>
-            {/* 컴포넌트만들기 */}
-            <Card
+            <CardNumber
               backgroundColor="#f9f9f9"
-              contents="현재 헬로우 코인 잔액은 900,000코인입니다."
+              color="#f61616"
+              numberNextContents="코인입니다."
+              numberPrevContents="현재 헬로우 코인 잔액은"
               position="center"
+              putNum={1234567890}
               textAlign="center"
               title=""
             />
