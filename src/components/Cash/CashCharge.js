@@ -74,6 +74,18 @@ const CashChargeContent = styled.div`
       }
     }
   }
+
+  #CashCharge--charge {
+    .checkedValue {
+      .radioCustom {
+        margin-right: 10px;
+      }
+      > :last-child {
+        margin: 20px 0 10px;
+        height: 50px;
+      }
+    }
+  }
 `;
 const Form = styled.form`
   > * {
@@ -126,7 +138,7 @@ export default function CashCharge() {
             <Ptext>충전하기</Ptext>
             <CheckedValue
               labelArr={["11,000", "22,000", "33,000"]}
-              spanText="원"
+              spanText="일만천원"
             />
             <Span>일만천원을 선택하셨습니다</Span>
           </div>
