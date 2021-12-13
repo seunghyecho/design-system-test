@@ -1,4 +1,4 @@
-import { ListThemeAccordion, Tab } from "@flescompany/design-system";
+import { Tab } from "@flescompany/design-system";
 import styled from "styled-components";
 const Container = styled.div`
   padding: 30px 15px;

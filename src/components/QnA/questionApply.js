@@ -1,43 +1,38 @@
-import { ListThemeAccordion, Tab } from "@flescompany/design-system";
+import { Textarea, Button } from "@flescompany/design-system";
 import styled from "styled-components";
-const Container = styled.div`
-  padding: 30px 15px;
-`;
-const Header = styled.h1`
-  padding-bottom: 20px;
-  color: ${({ theme }) => theme.colors.gray22};
-  font-size: ${({ theme }) => theme.fontSizes.lg};
-  line-height: 1.33;
-  span {
-    color: #002ab2;
+const Container = styled.div``;
+const Content = styled.div`
+  textarea {
+    width: 100%;
+    min-height: 380px;
+  }
+
+  .content-applyBtn {
+    margin-top: 30px;
+    width: 100%;
+
+    .outline,
+    .borderRadius5 {
+      width: 100%;
+      height: 50px;
+      color: #ffffff;
+      background-color: #ffb74b;
+    }
   }
 `;
-const Content = styled.div``;
-export default function Question() {
+const Form = styled.form``;
+export default function QuestionApply() {
   return (
-    <Container id="Question">
-      <Header className="Question--header">
-        문의하신 내용은
-        <br />
-        <span>24시간이내</span>에 답변해드립니다.
-      </Header>
-      <Content className="Question--content">
-        <Tab
-          TabArr={[
-            {
-              content:
-                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet molestiae dolorem enim nostrum temporibus illo aperiam non deserunt, at, reiciendis mollitia vero dicta.",
-              title: "문의",
-            },
-            {
-              content:
-                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet .",
-              title: "내 질문",
-            },
-          ]}
-          onClick={() => {}}
-          position="left"
-        />
+    <Container id="QuestionApply">
+      <Content className="QuestionApply--content">
+        <Form>
+          <div className="content-textarea">
+            <Textarea onChange={() => {}} />
+          </div>
+          <div className="content-applyBtn">
+            <Button appearance="borderRadius5" label="쿠폰등록" />
+          </div>
+        </Form>
       </Content>
     </Container>
   );

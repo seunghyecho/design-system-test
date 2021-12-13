@@ -1,9 +1,9 @@
-import Question from "../components/QnA/question";
+import QuestionAnswer from "../components/QnA/questionAnswer";
 
 export default function Body() {
   return (
     <div id="body">
-      <Question />
+      <QuestionAnswer />
     </div>
   );
 }
