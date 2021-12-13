@@ -7,7 +7,7 @@ import {
   Tab,
 } from "@flescompany/design-system";
 import styled from "styled-components";
-import bgAttendance from "../../assets/bg_attandacnce.png";
+import bgAttendance from "../../assets/img_attandacnce.png";
 const Container = styled.div`
   font-size: 14px;
 `;

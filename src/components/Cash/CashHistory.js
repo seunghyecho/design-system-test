@@ -6,7 +6,7 @@ import {
   Pagination,
 } from "@flescompany/design-system";
 import styled from "styled-components";
-import bgCoin from "../../assets/bg_coin.png";
+import bgCoin from "../../assets/img_coin.png";
 const Container = styled.div`
   padding: 30px 15px;
 `;
