@@ -122,7 +122,7 @@ const Form = styled.form`
   }
 `;
 
-export default function Apply(e) {
+export default function Apply() {
   return (
     <Container id="Apply">
       <Header className="Apply--header">
