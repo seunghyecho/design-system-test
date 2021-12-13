@@ -75,6 +75,8 @@ const Content = styled.div`
 
   .content-applyCoupon {
     display: flex;
+    height: 40px;
+    line-height: 40px;
     span {
       display: inline-block;
       color: #666666;
@@ -82,6 +84,8 @@ const Content = styled.div`
     }
     .input--auto {
       border: 1px solid #eeeeee;
+      font-size: 20px;
+      text-align: center;
       &:focus {
         border: 1px solid #ff9900;
       }
@@ -118,7 +122,7 @@ const Form = styled.form`
   }
 `;
 
-export default function Apply() {
+export default function Apply(e) {
   return (
     <Container id="Apply">
       <Header className="Apply--header">
@@ -157,13 +161,33 @@ export default function Apply() {
             />
           </div>
           <div className="content-applyCoupon">
-            <Input onChange={() => {}} placeholder="" state="auto" />
+            <Input
+              onChange={() => {}}
+              placeholder=""
+              state="auto"
+              maxLength="4"
+            />
             <span>-</span>
-            <Input onChange={() => {}} placeholder="" state="auto" />
+            <Input
+              onChange={() => {}}
+              placeholder=""
+              state="auto"
+              maxLength="4"
+            />
             <span>-</span>
-            <Input onChange={() => {}} placeholder="" state="auto" />
+            <Input
+              onChange={() => {}}
+              placeholder=""
+              state="auto"
+              maxLength="4"
+            />
             <span>-</span>
-            <Input onChange={() => {}} placeholder="" state="auto" />
+            <Input
+              onChange={() => {}}
+              placeholder=""
+              state="auto"
+              maxLength="4"
+            />
           </div>
           <div className="content-notice">
             <ul>
