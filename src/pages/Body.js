@@ -1,10 +1,9 @@
-import CashHistory from "../components/Cash/CashHistory";
-import Set from "../components/Set/Set";
+import Attendance from "../components/Attendance/attendance";
 
 export default function Body() {
   return (
     <div id="body">
-      <Set />
+      <Attendance />
     </div>
   );
 }

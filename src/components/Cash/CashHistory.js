@@ -10,7 +10,7 @@ import bgCoin from "../../assets/bg_coin.png";
 const Container = styled.div`
   padding: 30px 15px;
 `;
-const CashHistoryHeader = styled.div`
+const Header = styled.div`
   #CashHistory--banner {
     .bannerInTextAndImg {
       :first-child {
@@ -24,7 +24,7 @@ const CashHistoryHeader = styled.div`
     }
   }
 `;
-const CashHistoryContent = styled.div`
+const Content = styled.div`
   > * {
     margin: 30px 0;
   }
@@ -74,7 +74,7 @@ const Ptext = styled.p`
 export default function CashHistory() {
   return (
     <Container id="CashHistory">
-      <CashHistoryHeader className="CashHistory--header">
+      <Header className="CashHistory--header">
         <div id="CashHistory--banner">
           <BannerInTextAndImg
             backgroundColor="#cccccc"
@@ -85,8 +85,8 @@ export default function CashHistory() {
             lowerTitle="코인을 충전해주세요"
           />
         </div>
-      </CashHistoryHeader>
-      <CashHistoryContent className="CashHistory--content">
+      </Header>
+      <Content className="CashHistory--content">
         <div id="CashHistory--card">
           <Ptext>남은 잔액</Ptext>
           <CardNumber
@@ -153,7 +153,7 @@ export default function CashHistory() {
             position="center"
           />
         </div>
-      </CashHistoryContent>
+      </Content>
     </Container>
   );
 }
