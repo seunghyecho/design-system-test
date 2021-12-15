@@ -1,9 +1,9 @@
-import QuestionAnswer from "../components/QnA/questionAnswer";
+import Coupon from "../components/Coupon/coupon";
 
 export default function Body() {
   return (
     <div id="body">
-      <QuestionAnswer />
+      <Coupon />
     </div>
   );
 }

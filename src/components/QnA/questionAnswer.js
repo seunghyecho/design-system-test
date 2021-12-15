@@ -16,9 +16,9 @@ const Content = styled.div`
     }
   }
 `;
-export default function QuestionAnswer() {
+export default function QuestionAnswer({ label }) {
   return (
-    <Container id="QuestionAnswer">
+    <Container id="QuestionAnswer" label={label}>
       <Content className="QuestionAnswer--content">
         <div className="content-answer">
           <ListThemeDate

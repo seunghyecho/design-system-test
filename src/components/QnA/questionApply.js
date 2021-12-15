@@ -2,6 +2,7 @@ import { Textarea, Button } from "@flescompany/design-system";
 import styled from "styled-components";
 const Container = styled.div``;
 const Content = styled.div`
+  margin-top: 30px;
   textarea {
     width: 100%;
     min-height: 380px;
@@ -21,13 +22,13 @@ const Content = styled.div`
   }
 `;
 const Form = styled.form``;
-export default function QuestionApply() {
+export default function QuestionApply({ label }) {
   return (
-    <Container id="QuestionApply">
+    <Container id="QuestionApply" label={label}>
       <Content className="QuestionApply--content">
         <Form>
           <div className="content-textarea">
-            <Textarea onChange={() => {}} />
+            <Textarea onChange={() => {}} row="10" cols="10" />
           </div>
           <div className="content-applyBtn">
             <Button appearance="borderRadius5" label="쿠폰등록" />

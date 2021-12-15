@@ -1,5 +1,8 @@
 import { Tab } from "@flescompany/design-system";
 import styled from "styled-components";
+import QuestionApply from "./questionApply";
+import QuestionAnswer from "./questionAnswer";
+
 const Container = styled.div`
   padding: 30px 15px;
 `;
@@ -13,7 +16,7 @@ const Header = styled.h1`
   }
 `;
 const Content = styled.div``;
-export default function Question() {
+export default function Question({ label }) {
   return (
     <Container id="Question">
       <Header className="Question--header">
@@ -22,22 +25,10 @@ export default function Question() {
         <span>24시간이내</span>에 답변해드립니다.
       </Header>
       <Content className="Question--content">
-        <Tab
-          TabArr={[
-            {
-              content:
-                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet molestiae dolorem enim nostrum temporibus illo aperiam non deserunt, at, reiciendis mollitia vero dicta.",
-              title: "문의",
-            },
-            {
-              content:
-                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet .",
-              title: "내 질문",
-            },
-          ]}
-          onClick={() => {}}
-          position="left"
-        />
+        <Tab onClick={() => {}} position="left">
+          <QuestionApply label="문의" />
+          <QuestionAnswer label="내 질문" />
+        </Tab>
       </Content>
     </Container>
   );
