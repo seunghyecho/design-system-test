@@ -47,37 +47,39 @@ export default function CounselorList() {
         </div>
       </Header>
       <Content className="CounselorList--content">
-        <ListThemeBtn
-          listArr={[
-            {
-              des: "이름풀이로 과거, 현재, 미래를 알고 삶의 방향도 바로 잡아 약초같은 삶을 살 수 있습니다.",
-              img: "static/media/no_image.60e82241.jpeg",
-              label: "상세보기",
-              maxDialNum: "n",
-              minDialNum: "n",
-              phoneNum: "060-600-8911",
-              title: "00번 홍길동",
-            },
-            {
-              des: "이름풀이로 과거, 현재, 미래를 알고 삶의 방향도 바로 잡아 약초같은 삶을 살 수 있습니다.",
-              img: "static/media/no_image.60e82241.jpeg",
-              label: "상세보기",
-              maxDialNum: "n",
-              minDialNum: "n",
-              phoneNum: "060-600-8911",
-              title: "00번 홍길동",
-            },
-            {
-              des: "이름풀이로 과거, 현재, 미래를 알고 삶의 방향도 바로 잡아 약초같은 삶을 살 수 있습니다.",
-              img: "static/media/no_image.60e82241.jpeg",
-              label: "상세보기",
-              maxDialNum: "n",
-              minDialNum: "n",
-              phoneNum: "060-600-8911",
-              title: "00번 홍길동",
-            },
-          ]}
-        />
+        <div id="CounselorList--list">
+          <ListThemeBtn
+            listArr={[
+              {
+                des: "이름풀이로 과거, 현재, 미래를 알고 삶의 방향도 바로 잡아 약초같은 삶을 살 수 있습니다.",
+                img: "static/media/no_image.60e82241.jpeg",
+                label: "상세보기",
+                maxDialNum: "n",
+                minDialNum: "n",
+                phoneNum: "060-600-8911",
+                title: "00번 홍길동",
+              },
+              {
+                des: "이름풀이로 과거, 현재, 미래를 알고 삶의 방향도 바로 잡아 약초같은 삶을 살 수 있습니다.",
+                img: "static/media/no_image.60e82241.jpeg",
+                label: "상세보기",
+                maxDialNum: "n",
+                minDialNum: "n",
+                phoneNum: "060-600-8911",
+                title: "00번 홍길동",
+              },
+              {
+                des: "이름풀이로 과거, 현재, 미래를 알고 삶의 방향도 바로 잡아 약초같은 삶을 살 수 있습니다.",
+                img: "static/media/no_image.60e82241.jpeg",
+                label: "상세보기",
+                maxDialNum: "n",
+                minDialNum: "n",
+                phoneNum: "060-600-8911",
+                title: "00번 홍길동",
+              },
+            ]}
+          />
+        </div>
       </Content>
     </Container>
   );

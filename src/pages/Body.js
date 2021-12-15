@@ -1,9 +1,9 @@
-import CaseList from "../components/counsel/caseList";
+import SearchContents from "../components/search/searchContents";
 
 export default function Body() {
   return (
     <div id="body">
-      <CaseList />
+      <SearchContents />
     </div>
   );
 }
