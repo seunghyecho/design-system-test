@@ -7,26 +7,23 @@ import {
   Button,
 } from "@flescompany/design-system";
 const Container = styled.div`
-  padding-right: 15px;
-  padding-left: 15px;
-`;
-const UserinfoHeader = styled.div`
-  padding: 30px 0;
+  padding-bottom: 75px;
 `;
 const Header = styled.h1`
+  padding: 30px 0;
   color: #222;
   font-size: ${({ theme }) => theme.fontSizes.xxxl};
+`;
+const Span = styled.span`
+  color: ${({ theme }) => theme.colors.gray22};
+  font-weight: ${({ theme }) => theme.fontWeights.bold};
 `;
 const Ptext = styled.p`
   margin-bottom: 10px;
   font-size: ${({ theme }) => theme.fontSizes.small};
   font-weight: ${({ theme }) => theme.fontWeights.bold};
 `;
-const Span = styled.span`
-  color: ${({ theme }) => theme.colors.gray22};
-  font-weight: ${({ theme }) => theme.fontWeights.bold};
-`;
-const UserinfoContent = styled.div`
+const Content = styled.div`
   padding: 10px 0;
 `;
 const Form = styled.form`
@@ -63,15 +60,13 @@ const Form = styled.form`
     }
   }
 `;
-export default function Userinfo() {
+export default function Userinfo({ label }) {
   return (
-    <Container id="Userinfo">
-      <UserinfoHeader className="Userinfo--header">
-        <Header>
-          <Span>사주정보</Span>를 입력해주세요
-        </Header>
-      </UserinfoHeader>
-      <UserinfoContent className="Userinfo--content">
+    <Container id="Userinfo" label={label}>
+      <Header className="Userinfo--header">
+        <Span>사주정보</Span>를 입력해주세요
+      </Header>
+      <Content className="Userinfo--content">
         <Form>
           <div className="Userinfo--name">
             <Ptext>이름(성별)</Ptext>
@@ -206,7 +201,7 @@ export default function Userinfo() {
             <Button appearance="borderRadius5" label="확인" />
           </div>
         </Form>
-      </UserinfoContent>
+      </Content>
     </Container>
   );
 }

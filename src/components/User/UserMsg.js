@@ -1,8 +1,7 @@
 import styled from "styled-components";
 import { ListThemeAccordion, Empty } from "@flescompany/design-system";
 const Container = styled.div`
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-bottom: 75px;
 `;
 const UserMsgHeader = styled.div`
   padding: 30px 0;

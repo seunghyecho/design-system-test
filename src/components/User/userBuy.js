@@ -1,17 +1,13 @@
 import styled from "styled-components";
 import { ListThemeHighlight, Card } from "@flescompany/design-system";
 import noImage from "../../assets/no_image.jpeg";
-const Container = styled.div`
-  padding-right: 15px;
-  padding-left: 15px;
-`;
-const UserHistoryHeader = styled.div``;
+const Container = styled.div``;
 const Header = styled.h1`
   color: ${({ theme }) => theme.colors.gray22};
   font-size: ${({ theme }) => theme.fontSizes.lg};
   font-weight: ${({ theme }) => theme.fontWeights.bold};
 `;
-const UserHistoryContent = styled.div`
+const Content = styled.div`
   padding: 10px 0;
 
   .Card {
@@ -47,14 +43,12 @@ const UserHistoryContent = styled.div`
     }
   }
 `;
-export default function UserHistory() {
+export default function UserBuy({ label }) {
   return (
-    <Container id="UserHistory">
-      <UserHistoryHeader className="UserHistory--header">
-        <Header></Header>
-      </UserHistoryHeader>
-      <UserHistoryContent className="UserHistory--content">
-        <div id="UserHistory--card">
+    <Container id="UserBuy" label={label}>
+      <Header className="UserBuy--header"></Header>
+      <Content className="UserBuy--content">
+        <div id="UserBuy--card">
           <Card
             backgroundColor="#f9f9f9"
             contents="자주 보는 운세를 북마크 해두시고 \n 편하게 이용하세요."
@@ -63,7 +57,7 @@ export default function UserHistory() {
             title=""
           />
         </div>
-        <div id="UserHistory--list">
+        <div id="UserBuy--list">
           <ListThemeHighlight
             isDisableBtn
             listArr={[
@@ -87,7 +81,7 @@ export default function UserHistory() {
             onClick={() => {}}
           />
         </div>
-      </UserHistoryContent>
+      </Content>
     </Container>
   );
 }

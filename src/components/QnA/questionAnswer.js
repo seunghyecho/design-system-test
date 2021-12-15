@@ -1,8 +1,8 @@
-import { ListThemeDate } from "@flescompany/design-system";
+import { ListThemeDateState } from "@flescompany/design-system";
 import styled from "styled-components";
 const Container = styled.div``;
 const Content = styled.div`
-  .listThemeDate {
+  .listThemeDateState {
     border-bottom: 1px solid #eeeeee;
 
     a {
@@ -21,7 +21,7 @@ export default function QuestionAnswer({ label }) {
     <Container id="QuestionAnswer" label={label}>
       <Content className="QuestionAnswer--content">
         <div className="content-answer">
-          <ListThemeDate
+          <ListThemeDateState
             listArr={[
               {
                 listTitle:
@@ -30,7 +30,7 @@ export default function QuestionAnswer({ label }) {
             ]}
             state="complete"
           />
-          <ListThemeDate
+          <ListThemeDateState
             listArr={[
               {
                 listTitle: "listTitle2",
@@ -38,7 +38,7 @@ export default function QuestionAnswer({ label }) {
             ]}
             state="uncomplete"
           />
-          <ListThemeDate
+          <ListThemeDateState
             listArr={[
               {
                 listTitle: "listTitle3",

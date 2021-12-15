@@ -1,9 +1,9 @@
-import Coupon from "../components/Coupon/coupon";
+import User from "../components/user/user";
 
 export default function Body() {
   return (
     <div id="body">
-      <Coupon />
+      <User />
     </div>
   );
 }
