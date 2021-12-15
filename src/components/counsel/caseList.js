@@ -1,6 +1,13 @@
-import { BannerInTextAndImg } from "@flescompany/design-system";
+import {
+  BannerInTextAndImg,
+  Grid,
+  ListThemeArrow,
+  Pagination,
+} from "@flescompany/design-system";
 import styled from "styled-components";
 import imgCounselor from "../../assets/img_counselor.png";
+import noImage from "../../assets/no_image.jpeg";
+
 const Container = styled.div`
   padding: 0 15px;
 `;
@@ -25,10 +32,11 @@ const Header = styled.div`
   }
 `;
 const Content = styled.div`
-  .tab {
-    height: 60px;
-    .tabBody {
-      margin-top: 30px;
+  .listThemeArrow {
+    .text-area {
+      h2 {
+        font-size: 14px;
+      }
     }
   }
 `;
@@ -47,7 +55,54 @@ export default function CaseList() {
           />
         </div>
       </Header>
-      <Content className="CaseList--content"></Content>
+      <Content className="CaseList--content">
+        <div id="CaseList--grid">
+          <Grid
+            grids={[
+              {
+                name: "gridItem1",
+                url: `${noImage}`,
+              },
+              {
+                name: "gridItem2",
+                url: `${noImage}`,
+              },
+              {
+                name: "gridItem3",
+                url: `${noImage}`,
+              },
+              {
+                name: "gridItem4",
+                url: `${noImage}`,
+              },
+            ]}
+            onGrid={() => {}}
+            width="4"
+          />
+        </div>
+        <div id="CaseList--list">
+          <ListThemeArrow
+            listArr={[
+              {
+                img: `${noImage}`,
+                listSubTitle: "",
+                listTitle: "이 사람 돌아올까요?",
+              },
+              {
+                img: `${noImage}`,
+                listSubTitle: "",
+                listTitle: "이 사람 돌아올까요?",
+              },
+            ]}
+            onClick={() => {}}
+          />
+          <Pagination
+            onChangePage={() => {}}
+            pageArr={["1", "2", "3", "4", "5"]}
+            position="center"
+          />
+        </div>
+      </Content>
     </Container>
   );
 }

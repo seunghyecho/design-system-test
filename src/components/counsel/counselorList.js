@@ -1,4 +1,4 @@
-import { BannerInTextAndImg } from "@flescompany/design-system";
+import { BannerInTextAndImg, ListThemeBtn } from "@flescompany/design-system";
 import styled from "styled-components";
 import imgCounselor from "../../assets/img_counselor.png";
 const Container = styled.div`
@@ -25,10 +25,9 @@ const Header = styled.div`
   }
 `;
 const Content = styled.div`
-  .tab {
-    height: 60px;
-    .tabBody {
-      margin-top: 30px;
+  .listThemeBtn {
+    .des {
+      line-height: 1.67;
     }
   }
 `;
@@ -47,7 +46,39 @@ export default function CounselorList() {
           />
         </div>
       </Header>
-      <Content className="CounselorList--content"></Content>
+      <Content className="CounselorList--content">
+        <ListThemeBtn
+          listArr={[
+            {
+              des: "이름풀이로 과거, 현재, 미래를 알고 삶의 방향도 바로 잡아 약초같은 삶을 살 수 있습니다.",
+              img: "static/media/no_image.60e82241.jpeg",
+              label: "상세보기",
+              maxDialNum: "n",
+              minDialNum: "n",
+              phoneNum: "060-600-8911",
+              title: "00번 홍길동",
+            },
+            {
+              des: "이름풀이로 과거, 현재, 미래를 알고 삶의 방향도 바로 잡아 약초같은 삶을 살 수 있습니다.",
+              img: "static/media/no_image.60e82241.jpeg",
+              label: "상세보기",
+              maxDialNum: "n",
+              minDialNum: "n",
+              phoneNum: "060-600-8911",
+              title: "00번 홍길동",
+            },
+            {
+              des: "이름풀이로 과거, 현재, 미래를 알고 삶의 방향도 바로 잡아 약초같은 삶을 살 수 있습니다.",
+              img: "static/media/no_image.60e82241.jpeg",
+              label: "상세보기",
+              maxDialNum: "n",
+              minDialNum: "n",
+              phoneNum: "060-600-8911",
+              title: "00번 홍길동",
+            },
+          ]}
+        />
+      </Content>
     </Container>
   );
 }
