@@ -31,7 +31,7 @@ export default function Layout() {
         titleUrl={tLogo}
         onMenu={handleOpenMenu}
         onSearch={() => console.log("go searchContents")}
-        onCreateAccount={() => {}}
+        onCreateAccount={() => console.log("go profile")}
       />
       {openMenu ? <SideMenu onClick={handleCloseMenu} /> : null}
       <Body />
