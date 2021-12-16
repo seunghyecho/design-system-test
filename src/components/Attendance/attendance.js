@@ -121,7 +121,7 @@ const Ptext = styled.p`
 `;
 export default function Attendance() {
   return (
-    <Container>
+    <Container id="Attendance">
       <Header className="Attendance--header">
         <div id="Attendance--banner">
           <BannerInTextAndImg

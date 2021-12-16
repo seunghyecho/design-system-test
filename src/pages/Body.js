@@ -1,9 +1,5 @@
-import SearchContents from "../components/search/searchContents";
+import Login from "../components/member/login";
 
 export default function Body() {
-  return (
-    <div id="body">
-      <SearchContents />
-    </div>
-  );
+  return <div id="body"></div>;
 }
