@@ -1,8 +1,8 @@
-import User from "../components/user/user";
+import Home from "../components/home/home";
 export default function Body() {
   return (
     <div id="body">
-      <User />
+      <Home />
     </div>
   );
 }

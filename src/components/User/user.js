@@ -1,4 +1,4 @@
-import { Tab, ListThemeDateState } from "@flescompany/design-system";
+import { Tab } from "@flescompany/design-system";
 import styled from "styled-components";
 import Userinfo from "./userInfo";
 import UserMsg from "./userMsg";
