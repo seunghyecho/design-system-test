@@ -29,14 +29,14 @@ const Content = styled.div`
       background-color: #ffb74b;
     }
   }
-  .loginSocial {
+  .contentLoginSocial {
     margin-top: 50px;
     text-align: center;
     .buttonList {
       margin: 0 10px;
     }
   }
-  .loginComment {
+  .contentLoginComment {
     margin-top: 30px;
     ul {
       li {
@@ -77,11 +77,11 @@ export default function Login() {
       .catch();
   }, []);
   return (
-    <Container id="Login">
-      <Header className="LoginHeader">
+    <Container id="login">
+      <Header className="loginHeader">
         <img src={logo} alt={logo} />
       </Header>
-      <Content className="LoginContent">
+      <Content className="loginContent">
         <Form>
           <div className="contentId">
             <InputWithLabel
@@ -113,7 +113,7 @@ export default function Login() {
             />
           </div>
         </Form>
-        <div className="loginSocial">
+        <div className="contentLoginSocial">
           <SnsButtonGroup
             buttonArr={[
               {
@@ -131,7 +131,7 @@ export default function Login() {
             ]}
           />
         </div>
-        <div className="loginComment">
+        <div className="contentLoginComment">
           <ul>
             <li>기존 헬로우운세 계정과는 연동되지 않습니다.</li>
             <li>
