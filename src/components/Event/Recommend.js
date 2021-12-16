@@ -26,7 +26,7 @@ const Header = styled.div`
     }
   }
 
-  #Recommend--banner {
+  .headerBanner {
     .bannerInTextAndImg {
       border-radius: 5px;
       :first-child {
@@ -43,7 +43,7 @@ const Header = styled.div`
     }
   }
 
-  .header-description {
+  .headerDescription {
     margin-top: 20px;
     color: #666;
     span {
@@ -56,39 +56,30 @@ const Header = styled.div`
 `;
 const Content = styled.div`
   padding: 0 15px;
+
   > * {
     margin: 40px 0;
   }
-  .inputWithBtn--full {
-    border: none;
-    height: 40px;
 
-    input {
-      border: 1px solid #eee;
-      border-radius: 0;
-    }
-    button {
-      margin-left: 12px;
-      width: 100px;
-    }
-  }
-
-  .content-idCopy {
+  .contentIdCopy,
+  .contentIdSubmit {
     .inputWithBtn--full {
+      border: none;
+      height: 40px;
+
+      input {
+        border: 1px solid #eee;
+        border-radius: 0;
+      }
       button {
+        margin-left: 12px;
+        width: 100px;
         border: 1px solid #ffb74b;
       }
     }
   }
-  .content-idSubmit {
-    .inputWithBtn--full {
-      button {
-        background-color: #ffb74b;
-        color: #ffffff;
-      }
-    }
-  }
-  .content-card {
+
+  .contentCard {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -109,9 +100,9 @@ const Ptext = styled.p`
 `;
 export default function Recommend() {
   return (
-    <Container id="Recommend">
-      <Header className="RecommendHeader borderB">
-        <div id="Recommend--banner">
+    <Container id="recommend">
+      <Header className="recommendHeader borderB">
+        <div className="headerBanner">
           <BannerInTextAndImg
             backgroundColor="#ffc400"
             color="#ffffff"
@@ -121,7 +112,7 @@ export default function Recommend() {
             lowerTitle="포인트 얻자!"
           />
         </div>
-        <div className="header-description">
+        <div className="headerDescription">
           <ul>
             <li>
               추천인과 추천받은 사람 모두 <span>1,000 포인트</span> 적립
@@ -132,8 +123,8 @@ export default function Recommend() {
           </ul>
         </div>
       </Header>
-      <Content className="RecommendContent">
-        <div className="content-idCopy">
+      <Content className="recommendContent">
+        <div className="contentIdCopy">
           <Ptext>내 아이디</Ptext>
           <InputWithBtn
             borderColor="#eeeeee"
@@ -144,7 +135,7 @@ export default function Recommend() {
             state="full"
           />
         </div>
-        <div className="content-idSubmit">
+        <div className="contentIdSubmit">
           <Ptext>추천인 입력</Ptext>
           <InputWithBtn
             borderColor="#eeeeee"
@@ -155,7 +146,7 @@ export default function Recommend() {
             state="full"
           />
         </div>
-        <div className="content-card">
+        <div className="contentCard">
           <img src={iconRecommend} alt="" />
           <div className="content-card-comment">
             <p>
@@ -167,7 +158,7 @@ export default function Recommend() {
             </p>
           </div>
         </div>
-        <div className="content-table">
+        <div className="contentTable">
           <Table
             columns={[
               {

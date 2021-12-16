@@ -13,7 +13,7 @@ const Container = styled.div`
 const Header = styled.div`
   padding: 30px 15px 0;
 
-  #Apply--banner {
+  .headerBanner {
     .bannerInTextAndImg {
       background-image: url(${bgApply});
       background-size: 100% 120px;
@@ -51,7 +51,7 @@ const Content = styled.div`
     letter-spacing: -0.14px;
   }
 
-  .content-userCoin {
+  .contentUserCoin {
     .cardNumber {
       min-height: 80px;
 
@@ -73,7 +73,7 @@ const Content = styled.div`
     }
   }
 
-  .content-applyCoupon {
+  .contentApplyCoupon {
     display: flex;
     height: 40px;
     line-height: 40px;
@@ -91,7 +91,7 @@ const Content = styled.div`
       }
     }
   }
-  .content-notice {
+  .contentNotice {
     ul {
       li {
         line-height: 1.71;
@@ -104,7 +104,7 @@ const Content = styled.div`
     }
   }
 
-  .content-applyBtn {
+  .contentBtn {
     width: 100%;
 
     .outline,
@@ -124,9 +124,9 @@ const Form = styled.form`
 
 export default function Apply() {
   return (
-    <Container id="Apply">
-      <Header className="ApplyHeader">
-        <div id="Apply--banner">
+    <Container id="apply">
+      <Header className="applyHeader">
+        <div className="headerBanner">
           <BannerInTextAndImg
             backgroundColor="#ffc400"
             color="#ffffff"
@@ -137,9 +137,9 @@ export default function Apply() {
           />
         </div>
       </Header>
-      <Content className="ApplyContent">
+      <Content className="applyContent">
         <Form>
-          <div className="content-description">
+          <div className="contentDescription">
             <h1>
               헬로우운세 <span>이벤트 쿠폰</span>이란?
             </h1>
@@ -148,7 +148,7 @@ export default function Apply() {
               쿠폰번호를 등록하면 헬로우코인으로 적립되어 사용할 수 있습니다.
             </p>
           </div>
-          <div className="content-userCoin">
+          <div className="contentUserCoin">
             <CardNumber
               backgroundColor="#f9f9f9"
               color="#f61616"
@@ -160,7 +160,7 @@ export default function Apply() {
               title=""
             />
           </div>
-          <div className="content-applyCoupon">
+          <div className="contentApplyCoupon">
             <Input
               onChange={() => {}}
               placeholder=""
@@ -189,7 +189,7 @@ export default function Apply() {
               maxLength="4"
             />
           </div>
-          <div className="content-notice">
+          <div className="contentNotice">
             <ul>
               <li>
                 이벤트 쿠폰의 쿠폰번호를 등록하면 헬로우코인으로 적립되어 사용
@@ -203,7 +203,7 @@ export default function Apply() {
               <li>쿠폰 등록에 대한 문의는 고객센터를 이용해주세요.</li>
             </ul>
           </div>
-          <div className="content-applyBtn">
+          <div className="contentBtn">
             <Button appearance="borderRadius5" label="쿠폰등록" />
           </div>
         </Form>

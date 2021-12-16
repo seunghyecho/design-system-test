@@ -1,9 +1,9 @@
-import Coupon from "../components/coupon/coupon";
+import Recommend from "../components/event/recommend";
 
 export default function Body() {
   return (
     <div id="body">
-      <Coupon />
+      <Recommend />
     </div>
   );
 }
