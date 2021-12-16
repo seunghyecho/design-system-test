@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Header, Footer } from "@flescompany/design-system";
 import Body from "./Body.js";
 
@@ -12,16 +13,23 @@ import userOn from "../assets/on_user.svg";
 import cashOn from "../assets/on_cash.svg";
 import settingsOn from "../assets/on_settings.svg";
 import wishOn from "../assets/on_wish.svg";
+import SideMenu from "../components/menu/sideMenu.js";
 
 export default function Layout() {
+  const [open, setOpen] = useState(false);
+  const handleMenu = (e) => {
+    setOpen(!open);
+    console.log(setOpen);
+  };
   return (
     <>
       <Header
         titleUrl={tLogo}
-        onMenu={() => {}}
+        onMenu={handleMenu}
         onSearch={() => {}}
         onCreateAccount={() => {}}
       />
+      {open ? <SideMenu /> : null}
       <Body />
       <Footer
         footers={[
