@@ -1,9 +1,9 @@
-import CashCharge from "../components/cash/cashCharge";
+import Coupon from "../components/coupon/coupon";
 
 export default function Body() {
   return (
     <div id="body">
-      <CashCharge />
+      <Coupon />
     </div>
   );
 }

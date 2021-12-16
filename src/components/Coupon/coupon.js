@@ -17,33 +17,35 @@ const Header = styled.h1`
 const Content = styled.div``;
 export default function Coupon() {
   return (
-    <Container id="Coupon">
-      <Header className="CouponHeader">쿠폰함</Header>
-      <Content className="CouponContent">
-        <Table
-          columns={[
-            {
-              accesor: "id",
-              name: "Id",
-            },
-            {
-              accesor: "name",
-              name: "Name",
-            },
-            {
-              accesor: "email",
-              name: "Email",
-            },
-            {
-              accesor: "phone",
-              name: "Phone",
-            },
-            {
-              accesor: "website",
-              name: "Website",
-            },
-          ]}
-        />
+    <Container id="coupon">
+      <Header className="couponHeader">쿠폰함</Header>
+      <Content className="couponContent">
+        <div className="contentTable">
+          <Table
+            columns={[
+              {
+                accesor: "id",
+                name: "Id",
+              },
+              {
+                accesor: "name",
+                name: "Name",
+              },
+              {
+                accesor: "email",
+                name: "Email",
+              },
+              {
+                accesor: "phone",
+                name: "Phone",
+              },
+              {
+                accesor: "website",
+                name: "Website",
+              },
+            ]}
+          />
+        </div>
       </Content>
     </Container>
   );
