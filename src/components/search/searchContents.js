@@ -29,7 +29,7 @@ const Ptext = styled.p`
 export default function SearchContents() {
   return (
     <Container id="SearchContents">
-      <Content className="SearchContents--content">
+      <Content className="SearchContentsContent">
         <div id="SearchContents--search">
           <InputSearch
             onChange={() => {}}

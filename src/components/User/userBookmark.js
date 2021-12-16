@@ -42,8 +42,8 @@ const Content = styled.div`
 export default function UserBookmark({ label }) {
   return (
     <Container id="UserBookmark" label={label}>
-      <Header className="UserBookmark--header"></Header>
-      <Content className="UserBookmark--content">
+      <Header className="UserBookmarkHeader"></Header>
+      <Content className="UserBookmarkContent">
         <div id="UserBookmark--card">
           <Card
             backgroundColor="#f9f9f9"

@@ -63,10 +63,10 @@ const Form = styled.form`
 export default function Userinfo({ label }) {
   return (
     <Container id="Userinfo" label={label}>
-      <Header className="Userinfo--header">
+      <Header className="UserinfoHeader">
         <Span>사주정보</Span>를 입력해주세요
       </Header>
-      <Content className="Userinfo--content">
+      <Content className="UserinfoContent">
         <Form>
           <div className="Userinfo--name">
             <Ptext>이름(성별)</Ptext>

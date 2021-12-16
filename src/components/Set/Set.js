@@ -35,7 +35,7 @@ const Ptext = styled.p`
 export default function Set() {
   return (
     <Container id="Set">
-      <Content className="Set--content">
+      <Content className="SetContent">
         <div id="Set--myInfo">
           <Ptext>내 정보</Ptext>
           <Menu

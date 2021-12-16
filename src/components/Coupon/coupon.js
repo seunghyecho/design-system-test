@@ -18,8 +18,8 @@ const Content = styled.div``;
 export default function Coupon() {
   return (
     <Container id="Coupon">
-      <Header className="Coupon--header">쿠폰함</Header>
-      <Content className="Coupon--content">
+      <Header className="CouponHeader">쿠폰함</Header>
+      <Content className="CouponContent">
         <Table
           columns={[
             {

@@ -3,24 +3,21 @@ import {
   Button,
   SnsButtonGroup,
 } from "@flescompany/design-system";
+import axios from "axios";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import logo from "../../assets/logo.png";
 
-const Container = styled.div``;
+const Container = styled.div`
+  padding: 70px 0;
+`;
 const Header = styled.div`
   text-align: center;
 `;
 const Content = styled.div`
   padding: 0 15px;
 
-  .content--id,
-  .content--pw {
-    input {
-      height: 50px;
-    }
-  }
-
-  .content-loginBtn {
+  .contentBtn {
     margin-top: 25px;
     width: 100%;
 
@@ -32,42 +29,97 @@ const Content = styled.div`
       background-color: #ffb74b;
     }
   }
+  .loginSocial {
+    margin-top: 50px;
+    text-align: center;
+    .buttonList {
+      margin: 0 10px;
+    }
+  }
+  .loginComment {
+    margin-top: 30px;
+    ul {
+      li {
+        font-size: 12px;
+        line-height: 1.67;
+        letter-spacing: -0.12px;
+        color: #aaa;
+      }
+    }
+  }
 `;
-const Form = styled.form``;
+const Form = styled.form`
+  .contentId,
+  .contentPw {
+    input {
+      height: 50px;
+    }
+  }
+`;
 export default function Login() {
+  const [inputId, setInputId] = useState("");
+  const [inputPw, setInputPw] = useState("");
+  const handleInputId = (e) => {
+    setInputId(e.target.value);
+    console.log(e.target.value);
+  };
+  const handleInputPw = (e) => {
+    setInputPw(e.target.value);
+    console.log(e.target.value);
+  };
+  const onClickLogin = () => {
+    console.log("click login");
+  };
+  useEffect(() => {
+    axios
+      .get("http://jsonplaceholder.typicode.com/users")
+      .then((res) => console.log(res))
+      .catch();
+  }, []);
   return (
     <Container id="Login">
-      <Header className="Login--header">
+      <Header className="LoginHeader">
         <img src={logo} alt={logo} />
       </Header>
-      <Content className="Login--content">
+      <Content className="LoginContent">
         <Form>
-          <div className="content--id">
+          <div className="contentId">
             <InputWithLabel
+              type="text"
               error=""
               id="userid"
               label=""
               placeholder="user@email.com"
-              value="user@email.com"
+              inputValue={inputId}
+              onChange={handleInputId}
             />
           </div>
-          <div className="content--pw">
+          <div className="contentPw">
             <InputWithLabel
               error=""
               id="password"
               label=""
-              placeholder="1234"
+              placeholder="12345"
               type="password"
-              value="1234"
+              inputValue={inputPw}
+              onChange={handleInputPw}
             />
           </div>
-          <div className="content-loginBtn">
-            <Button appearance="borderRadius5" label="로그인" />
+          <div className="contentBtn">
+            <Button
+              appearance="borderRadius5"
+              label="로그인"
+              onClick={onClickLogin}
+            />
           </div>
         </Form>
-        <div className="login-social">
+        <div className="loginSocial">
           <SnsButtonGroup
             buttonArr={[
+              {
+                id: "kakao",
+                name: "카카오계정 로그인",
+              },
               {
                 id: "naver",
                 name: "네이버 로그인",
@@ -76,17 +128,17 @@ export default function Login() {
                 id: "facebook",
                 name: "페이스북 로그인",
               },
-              {
-                id: "google",
-                name: "구글 로그인",
-              },
-              {
-                id: "kakao",
-                name: "카카오계정 로그인",
-              },
             ]}
-            onClick={() => {}}
           />
+        </div>
+        <div className="loginComment">
+          <ul>
+            <li>기존 헬로우운세 계정과는 연동되지 않습니다.</li>
+            <li>
+              SNS계정으로 로그인 시, 헬로우운세 이용을 위한 기본 정보만을
+              사용하며 그 외 추가정보나 글 게시 권한 등을 요청하지 않습니다
+            </li>
+          </ul>
         </div>
       </Content>
     </Container>

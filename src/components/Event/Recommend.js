@@ -110,7 +110,7 @@ const Ptext = styled.p`
 export default function Recommend() {
   return (
     <Container id="Recommend">
-      <Header className="Recommend--header borderB">
+      <Header className="RecommendHeader borderB">
         <div id="Recommend--banner">
           <BannerInTextAndImg
             backgroundColor="#ffc400"
@@ -132,7 +132,7 @@ export default function Recommend() {
           </ul>
         </div>
       </Header>
-      <Content className="Recommend--content">
+      <Content className="RecommendContent">
         <div className="content-idCopy">
           <Ptext>내 아이디</Ptext>
           <InputWithBtn

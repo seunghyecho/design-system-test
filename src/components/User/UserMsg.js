@@ -36,10 +36,10 @@ export default function UserMsg() {
   ];
   return (
     <Container id="UserMsg">
-      <UserMsgHeader className="UserMsg--header">
+      <UserMsgHeader className="UserMsgHeader">
         <Header>메세지함</Header>
       </UserMsgHeader>
-      <UserMsgContent className="UserMsg--content">
+      <UserMsgContent className="UserMsgContent">
         {accordionData.length > 0 ? (
           <ListThemeAccordion accordionData={accordionData} />
         ) : (

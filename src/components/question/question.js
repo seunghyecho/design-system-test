@@ -19,12 +19,12 @@ const Content = styled.div``;
 export default function Question({ label }) {
   return (
     <Container id="Question">
-      <Header className="Question--header">
+      <Header className="QuestionHeader">
         문의하신 내용은
         <br />
         <span>24시간이내</span>에 답변해드립니다.
       </Header>
-      <Content className="Question--content">
+      <Content className="QuestionContent">
         <Tab onClick={() => {}} position="left">
           <QuestionApply label="문의" />
           <QuestionAnswer label="내 질문" />

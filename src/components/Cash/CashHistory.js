@@ -11,7 +11,7 @@ const Container = styled.div`
   padding: 30px 15px;
 `;
 const Header = styled.div`
-  #CashHistory--banner {
+  .headerBanner {
     .bannerInTextAndImg {
       :first-child {
         padding-left: 20px;
@@ -28,7 +28,7 @@ const Content = styled.div`
   > * {
     margin: 30px 0;
   }
-  #CashHistory--card {
+  .cashHistoryCard {
     .cardNumber {
       min-height: 80px;
 
@@ -49,7 +49,7 @@ const Content = styled.div`
       }
     }
   }
-  #CashHistory--table {
+  .cashHistoryTable {
     .auto {
       width: 80px;
       margin-left: auto;
@@ -73,9 +73,9 @@ const Ptext = styled.p`
 
 export default function CashHistory() {
   return (
-    <Container id="CashHistory">
-      <Header className="CashHistory--header">
-        <div id="CashHistory--banner">
+    <Container id="cashHistory">
+      <Header className="cashHistoryHeader">
+        <div className="headerBanner">
           <BannerInTextAndImg
             backgroundColor="#cccccc"
             color="#ffffff"
@@ -86,8 +86,8 @@ export default function CashHistory() {
           />
         </div>
       </Header>
-      <Content className="CashHistory--content">
-        <div id="CashHistory--card">
+      <Content className="cashHistoryContent">
+        <div className="cashHistoryCard">
           <Ptext>남은 잔액</Ptext>
           <CardNumber
             backgroundColor="#f9f9f9"
@@ -100,7 +100,7 @@ export default function CashHistory() {
             title=""
           />
         </div>
-        <div id="CashHistory--table">
+        <div className="cashHistoryTable">
           <Select
             className="auto"
             hideLabel

@@ -7,7 +7,8 @@ const Container = styled.div`
 const Header = styled.div`
   padding: 30px 0 40px;
   position: relative;
-  #Counselor--banner {
+
+  .headerBanner {
     .bannerInTextAndImg {
       border-radius: 5px;
       :first-child {
@@ -25,17 +26,19 @@ const Header = styled.div`
   }
 `;
 const Content = styled.div`
-  .listThemeBtn {
-    .des {
-      line-height: 1.67;
+  .contentList {
+    .listThemeBtn {
+      .des {
+        line-height: 1.67;
+      }
     }
   }
 `;
 export default function CounselorList() {
   return (
-    <Container id="CounselorList">
-      <Header className="CounselorList--header">
-        <div id="Counselor--banner">
+    <Container id="counselorList">
+      <Header className="counselorListHeader">
+        <div className="headerBanner">
           <BannerInTextAndImg
             backgroundColor="#002AB2"
             color="#ffffff"
@@ -46,8 +49,8 @@ export default function CounselorList() {
           />
         </div>
       </Header>
-      <Content className="CounselorList--content">
-        <div id="CounselorList--list">
+      <Content className="counselorListContent">
+        <div className="contentList">
           <ListThemeBtn
             listArr={[
               {

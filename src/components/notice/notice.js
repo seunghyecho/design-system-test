@@ -20,12 +20,12 @@ const Content = styled.div``;
 export default function Notice() {
   return (
     <Container id="Notice">
-      <Header className="Notice--header">
+      <Header className="NoticeHeader">
         헬로우운세의 <span>소식과</span>
         <br />
         <span>이벤트</span>를 알려드립니다.
       </Header>
-      <Content className="Notice--content">
+      <Content className="NoticeContent">
         <Tab onClick={() => {}} position="left">
           <NoticeAll label="전체" />
           <NoticeOnly label="공지사항" />

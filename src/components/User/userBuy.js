@@ -46,8 +46,8 @@ const Content = styled.div`
 export default function UserBuy({ label }) {
   return (
     <Container id="UserBuy" label={label}>
-      <Header className="UserBuy--header"></Header>
-      <Content className="UserBuy--content">
+      <Header className="UserBuyHeader"></Header>
+      <Content className="UserBuyContent">
         <div id="UserBuy--card">
           <Card
             backgroundColor="#f9f9f9"

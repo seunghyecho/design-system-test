@@ -5,7 +5,7 @@ const Content = styled.div``;
 
 export default function NoticeAll() {
   return (
-    <Content className="NoticeAll--content">
+    <Content className="NoticeAllContent">
       <ListThemeDate
         listArr={[
           {

@@ -125,7 +125,7 @@ const Form = styled.form`
 export default function Apply() {
   return (
     <Container id="Apply">
-      <Header className="Apply--header">
+      <Header className="ApplyHeader">
         <div id="Apply--banner">
           <BannerInTextAndImg
             backgroundColor="#ffc400"
@@ -137,7 +137,7 @@ export default function Apply() {
           />
         </div>
       </Header>
-      <Content className="Apply--content">
+      <Content className="ApplyContent">
         <Form>
           <div className="content-description">
             <h1>

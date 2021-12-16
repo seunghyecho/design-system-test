@@ -25,7 +25,7 @@ const Form = styled.form``;
 export default function QuestionApply({ label }) {
   return (
     <Container id="QuestionApply" label={label}>
-      <Content className="QuestionApply--content">
+      <Content className="QuestionApplyContent">
         <Form>
           <div className="content-textarea">
             <Textarea onChange={() => {}} row="10" cols="10" />

@@ -11,8 +11,8 @@ import bgCoin from "../../assets/img_coin.png";
 const Container = styled.div`
   padding: 30px 15px;
 `;
-const CashChargeHeader = styled.div`
-  #CashCharge--banner {
+const Header = styled.div`
+  .headerBanner {
     .bannerInTextAndImg {
       :first-child {
         padding-left: 20px;
@@ -25,8 +25,8 @@ const CashChargeHeader = styled.div`
     }
   }
 `;
-const CashChargeContent = styled.div`
-  #CashCharge--chargeWay {
+const Content = styled.div`
+  .contentChargeWay {
     .buttonList--half {
       margin: 6px;
       width: calc(100% / 2 - 12px);
@@ -41,7 +41,7 @@ const CashChargeContent = styled.div`
       }
     }
   }
-  #CashCharge--confirm {
+  .contentConfirm {
     width: 100%;
 
     .outline,
@@ -53,7 +53,7 @@ const CashChargeContent = styled.div`
     }
   }
 
-  #CashCharge--card {
+  .contentCard {
     .cardNumber {
       min-height: 80px;
 
@@ -75,7 +75,7 @@ const CashChargeContent = styled.div`
     }
   }
 
-  #CashCharge--charge {
+  .contentCharge {
     .checkedValue {
       .radioCustom {
         margin-right: 10px;
@@ -106,9 +106,9 @@ const Span = styled.span`
 
 export default function CashCharge() {
   return (
-    <Container id="CashCharge">
-      <CashChargeHeader className="CashCharge--header">
-        <div id="CashCharge--banner">
+    <Container id="cashCharge">
+      <Header className="cashChargeHeader">
+        <div className="headerBanner">
           <BannerInTextAndImg
             backgroundColor="#cccccc"
             color="#ffffff"
@@ -118,10 +118,10 @@ export default function CashCharge() {
             lowerTitle="코인을 충전해주세요"
           />
         </div>
-      </CashChargeHeader>
-      <CashChargeContent className="CashCharge--content">
+      </Header>
+      <Content className="cashChargeContent">
         <Form>
-          <div id="CashCharge--card">
+          <div className="contentCard">
             <Ptext>남은 잔액</Ptext>
             <CardNumber
               backgroundColor="#f9f9f9"
@@ -134,7 +134,7 @@ export default function CashCharge() {
               title=""
             />
           </div>
-          <div id="CashCharge--charge">
+          <div className="contentCharge">
             <Ptext>충전하기</Ptext>
             <CheckedValue
               labelArr={["11,000", "22,000", "33,000"]}
@@ -142,7 +142,7 @@ export default function CashCharge() {
             />
             <Span>일만천원을 선택하셨습니다</Span>
           </div>
-          <div id="CashCharge--chargeWay">
+          <div className="contentChargeWay">
             <Ptext>충전방법</Ptext>
             <ButtonGroup
               buttonArr={[
@@ -156,11 +156,11 @@ export default function CashCharge() {
               width="half"
             />
           </div>
-          <div id="CashCharge--confirm">
+          <div className="contentConfirm">
             <Button appearance="borderRadius5" label="충전" />
           </div>
         </Form>
-      </CashChargeContent>
+      </Content>
     </Container>
   );
 }

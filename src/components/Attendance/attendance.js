@@ -14,7 +14,7 @@ const Container = styled.div`
 const Header = styled.div`
   padding: 30px 15px 0;
 
-  #Attendance--banner {
+  .headerBanner {
     .bannerInTextAndImg {
       border-radius: 5px;
       :first-child {
@@ -37,7 +37,7 @@ const Header = styled.div`
   }
 `;
 const Content = styled.div`
-  #Attendance--calendar {
+  .contentCalendar {
     padding: 0 15px 40px 15px;
     position: relative;
 
@@ -56,7 +56,7 @@ const Content = styled.div`
       font-size: 14px;
     }
   }
-  #Attendance--talk {
+  .contentTalk {
     padding: 40px 15px;
     position: relative;
     width: 100%;
@@ -111,7 +111,7 @@ const Content = styled.div`
       }
     }
   }
-  #Attendance--reply {
+  .contentReply {
     padding: 40px 15px;
   }
 `;
@@ -121,9 +121,9 @@ const Ptext = styled.p`
 `;
 export default function Attendance() {
   return (
-    <Container id="Attendance">
-      <Header className="Attendance--header">
-        <div id="Attendance--banner">
+    <Container id="attendance">
+      <Header className="attendanceHeader">
+        <div className="headerBanner">
           <BannerInTextAndImg
             backgroundColor="#ffc400"
             color="#ffffff"
@@ -134,8 +134,8 @@ export default function Attendance() {
           />
         </div>
       </Header>
-      <Content>
-        <div id="Attendance--calendar" className="borderB">
+      <Content className="attendanceContent">
+        <div className="contentCalendar borderB">
           <CardNumberFormatD
             color="#ff0000"
             numberNextContents="코인"
@@ -154,7 +154,7 @@ export default function Attendance() {
             </p>
           </div>
         </div>
-        <div id="Attendance--talk" className="borderB">
+        <div className="contentTalk borderB">
           <Ptext>TALK</Ptext>
           <Textarea
             onChange={() => {}}
@@ -199,7 +199,7 @@ export default function Attendance() {
             />
           </div>
         </div>
-        <div id="Attendance--reply">
+        <div className="contentReply">
           <Tab
             TabArr={[
               {

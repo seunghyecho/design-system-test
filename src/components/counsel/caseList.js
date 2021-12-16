@@ -14,7 +14,7 @@ const Container = styled.div`
 const Header = styled.div`
   padding: 30px 0 40px;
   position: relative;
-  #Counselor--banner {
+  .headerBanner {
     .bannerInTextAndImg {
       border-radius: 5px;
       :first-child {
@@ -32,19 +32,21 @@ const Header = styled.div`
   }
 `;
 const Content = styled.div`
-  .listThemeArrow {
-    .text-area {
-      h2 {
-        font-size: 14px;
+  .contentList {
+    .listThemeArrow {
+      .text-area {
+        h2 {
+          font-size: 14px;
+        }
       }
     }
   }
 `;
 export default function CaseList() {
   return (
-    <Container id="CaseList">
-      <Header className="CaseList--header">
-        <div id="Counselor--banner">
+    <Container id="caseList">
+      <Header className="caseListHeader">
+        <div className="headerBanner">
           <BannerInTextAndImg
             backgroundColor="#002AB2"
             color="#ffffff"
@@ -55,8 +57,8 @@ export default function CaseList() {
           />
         </div>
       </Header>
-      <Content className="CaseList--content">
-        <div id="CaseList--grid">
+      <Content className="caseListContent">
+        <div className="contentGrid">
           <Grid
             grids={[
               {
@@ -80,7 +82,7 @@ export default function CaseList() {
             width="4"
           />
         </div>
-        <div id="CaseList--list">
+        <div className="contentList">
           <ListThemeArrow
             listArr={[
               {

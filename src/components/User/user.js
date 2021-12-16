@@ -19,7 +19,7 @@ const Content = styled.div`
 export default function User() {
   return (
     <Container id="User">
-      <Content className="User--content">
+      <Content className="UserContent">
         <Tab onClick={() => {}} position="left">
           <Userinfo label="내사주" />
           <UserMsg label="메세지함" />

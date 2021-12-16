@@ -25,7 +25,7 @@ export default function Faq() {
   return (
     <Container>
       <Header>운세서비스 FAQ</Header>
-      <Content className="Faq--content">
+      <Content className="FaqContent">
         <ListThemeAccordion
           accordionData={[
             {

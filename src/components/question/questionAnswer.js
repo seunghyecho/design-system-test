@@ -19,7 +19,7 @@ const Content = styled.div`
 export default function QuestionAnswer({ label }) {
   return (
     <Container id="QuestionAnswer" label={label}>
-      <Content className="QuestionAnswer--content">
+      <Content className="QuestionAnswerContent">
         <div className="content-answer">
           <ListThemeDateState
             listArr={[
