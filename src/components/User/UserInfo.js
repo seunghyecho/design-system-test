@@ -6,6 +6,7 @@ import {
   Checkbox,
   Button,
 } from "@flescompany/design-system";
+import { useState } from "react";
 const Container = styled.div`
   padding-bottom: 75px;
 `;
@@ -33,23 +34,23 @@ const Form = styled.form`
       margin: 0;
     }
   }
-  .Userinfo--interest {
-    > * {
-      margin: 20px 0;
-    }
-  }
   .inputWithSelect--full,
   .input--full,
   .select--full {
     height: 50px;
   }
-  .Userinfo--policy {
+  .contentInterest {
+    > * {
+      margin: 20px 0;
+    }
+  }
+  .contentPolicy {
     span {
       font-size: ${({ theme }) => theme.fontSizes.small};
       font-weight: ${({ theme }) => theme.fontWeights.regular};
     }
   }
-  .Userinfo--confirm {
+  .contentConfirm {
     width: 100%;
     .outline,
     .borderRadius5 {
@@ -61,14 +62,19 @@ const Form = styled.form`
   }
 `;
 export default function Userinfo({ label }) {
+  const [inputTime, setInputTime] = useState("");
+  const handleInputTime = (e) => {
+    setInputTime(e.target.value);
+    console.log(e.target.value);
+  };
   return (
-    <Container id="Userinfo" label={label}>
-      <Header className="UserinfoHeader">
+    <Container id="userinfo" label={label}>
+      <Header className="userinfoHeader">
         <Span>사주정보</Span>를 입력해주세요
       </Header>
-      <Content className="UserinfoContent">
+      <Content className="userinfoContent">
         <Form>
-          <div className="Userinfo--name">
+          <div className="contentName">
             <Ptext>이름(성별)</Ptext>
             <InputWithSelect
               borderColor="#eeeeee"
@@ -89,7 +95,7 @@ export default function Userinfo({ label }) {
               ]}
             />
           </div>
-          <div className="Userinfo--birth">
+          <div className="contentBirth">
             <Ptext>생년월일</Ptext>
             <InputWithSelect
               borderColor="#eeeeee"
@@ -110,16 +116,18 @@ export default function Userinfo({ label }) {
               ]}
             />
           </div>
-          <div className="Userinfo--time">
+          <div className="contentTime">
             <InputWithLabel
+              type="text"
+              error=""
               id="time"
               label="태어난 시"
               placeholder="예)14시20분"
-              value=""
-              error=""
+              inputValue={inputTime}
+              onChange={handleInputTime}
             />
           </div>
-          <div className="Userinfo--married">
+          <div className="contentMarried">
             <Ptext>결혼여부</Ptext>
             <Select
               className="full"
@@ -147,7 +155,7 @@ export default function Userinfo({ label }) {
               state="full"
             />
           </div>
-          <div className="Userinfo--interest">
+          <div className="contentInterest">
             <Ptext>관심키워드</Ptext>
             <Select
               className="full"
@@ -189,7 +197,7 @@ export default function Userinfo({ label }) {
               state="full"
             />
           </div>
-          <div className="Userinfo--policy">
+          <div className="contentPolicy">
             <Checkbox
               checked
               label="운세서비스 이용을 위한 개인정보제공동의서 (필수)"
@@ -197,7 +205,7 @@ export default function Userinfo({ label }) {
               onChange={() => {}}
             />
           </div>
-          <div className="Userinfo--confirm">
+          <div className="contentConfirm">
             <Button appearance="borderRadius5" label="확인" />
           </div>
         </Form>

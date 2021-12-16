@@ -7,9 +7,9 @@ const Content = styled.div`
   div {
     box-shadow: none;
   }
-  #Set--myInfo,
-  #Set--event,
-  #Set--cs {
+  .contentMyInfo,
+  .contentEvent,
+  .contentCs {
     margin: 30px 0;
     &:first-child {
       margin: 0;
@@ -19,8 +19,8 @@ const Content = styled.div`
       > div {
         margin: 0;
         .dropdown-header {
-          font-size: 14px;
-          font-weight: 400;
+          font-size: ${({ theme }) => theme.fontSizes.small};
+          font-weight: ${({ theme }) => theme.fontWeights.regular};
         }
       }
     }
@@ -34,9 +34,9 @@ const Ptext = styled.p`
 `;
 export default function Set() {
   return (
-    <Container id="Set">
-      <Content className="SetContent">
-        <div id="Set--myInfo">
+    <Container id="set">
+      <Content className="setContent">
+        <div className="contentMyInfo">
           <Ptext>내 정보</Ptext>
           <Menu
             menuArr={[
@@ -79,7 +79,7 @@ export default function Set() {
             onClick={() => {}}
           />
         </div>
-        <div id="Set--event">
+        <div className="contentEvent">
           <Ptext>이벤트</Ptext>
           <Menu
             menuArr={[
@@ -112,7 +112,7 @@ export default function Set() {
             onClick={() => {}}
           />
         </div>
-        <div id="Set--cs">
+        <div className="contentCs">
           <Ptext>고객센터</Ptext>
           <Menu
             menuArr={[

@@ -17,7 +17,7 @@ const Content = styled.div`
       margin: 0;
     }
   }
-  #SearchContents--search {
+  .contentSearch {
     height: 48px;
   }
 `;
@@ -28,9 +28,9 @@ const Ptext = styled.p`
 `;
 export default function SearchContents() {
   return (
-    <Container id="SearchContents">
-      <Content className="SearchContentsContent">
-        <div id="SearchContents--search">
+    <Container id="searchContents">
+      <Content className="searchContentsContent">
+        <div className="contentSearch">
           <InputSearch
             onChange={() => {}}
             onClick={function noRefCheck() {}}
@@ -38,7 +38,7 @@ export default function SearchContents() {
             state="full"
           />
         </div>
-        <div id="SearchContents--tag">
+        <div className="contentTag">
           <Ptext>해시태그</Ptext>
           <ButtonGroup
             buttonArr={[
@@ -55,7 +55,7 @@ export default function SearchContents() {
             width="quarter"
           />
         </div>
-        <div id="Searchcontents--list">
+        <div className="contentList">
           <ListThemeTag
             listArr={[
               {

@@ -1,8 +1,8 @@
-import Question from "../components/question/question";
+import User from "../components/user/user";
 export default function Body() {
   return (
     <div id="body">
-      <Question />
+      <User />
     </div>
   );
 }
