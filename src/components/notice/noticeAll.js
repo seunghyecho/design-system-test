@@ -1,11 +1,9 @@
 import { ListThemeDate, Pagination } from "@flescompany/design-system";
 import styled from "styled-components";
-
 const Content = styled.div``;
-
 export default function NoticeAll() {
   return (
-    <Content className="NoticeAllContent">
+    <Content className="noticeAllContent">
       <ListThemeDate
         listArr={[
           {

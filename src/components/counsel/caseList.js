@@ -22,7 +22,7 @@ const Header = styled.div`
         h1,
         h5 {
           margin: 10px 0;
-          font-size: 18px;
+          font-size: ${({ theme }) => theme.fontSizes.lg};
         }
       }
       img {
@@ -36,7 +36,7 @@ const Content = styled.div`
     .listThemeArrow {
       .text-area {
         h2 {
-          font-size: 14px;
+          font-size: ${({ theme }) => theme.fontSizes.small};
         }
       }
     }

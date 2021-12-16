@@ -12,11 +12,13 @@ const Header = styled.h1`
 const Content = styled.div`
   border-top: 2px solid ${({ theme }) => theme.colors.primary};
 
-  #listThemeAccordion {
-    .accordion-header {
-      height: 50px;
-      h2 {
-        font-size: 14px;
+  &.faqContent {
+    #listThemeAccordion {
+      .accordion-header {
+        height: 50px;
+        h2 {
+          font-size: ${({ theme }) => theme.fontSizes.small};
+        }
       }
     }
   }
@@ -25,7 +27,7 @@ export default function Faq() {
   return (
     <Container>
       <Header>운세서비스 FAQ</Header>
-      <Content className="FaqContent">
+      <Content className="faqContent">
         <ListThemeAccordion
           accordionData={[
             {

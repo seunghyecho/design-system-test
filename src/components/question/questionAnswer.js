@@ -2,25 +2,27 @@ import { ListThemeDateState } from "@flescompany/design-system";
 import styled from "styled-components";
 const Container = styled.div``;
 const Content = styled.div`
-  .listThemeDateState {
-    border-bottom: 1px solid #eeeeee;
+  .contentList {
+    .listThemeDateState {
+      border-bottom: 1px solid #eeeeee;
 
-    a {
-      height: 67px;
+      a {
+        height: 67px;
 
-      h2 {
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 1.71;
+        h2 {
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 1.71;
+        }
       }
     }
   }
 `;
 export default function QuestionAnswer({ label }) {
   return (
-    <Container id="QuestionAnswer" label={label}>
-      <Content className="QuestionAnswerContent">
-        <div className="content-answer">
+    <Container id="questionAnswer" label={label}>
+      <Content className="questionAnswerContent">
+        <div className="contentList">
           <ListThemeDateState
             listArr={[
               {

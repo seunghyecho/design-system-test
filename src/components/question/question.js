@@ -18,17 +18,19 @@ const Header = styled.h1`
 const Content = styled.div``;
 export default function Question({ label }) {
   return (
-    <Container id="Question">
-      <Header className="QuestionHeader">
+    <Container id="question">
+      <Header className="questionHeader">
         문의하신 내용은
         <br />
         <span>24시간이내</span>에 답변해드립니다.
       </Header>
-      <Content className="QuestionContent">
-        <Tab onClick={() => {}} position="left">
-          <QuestionApply label="문의" />
-          <QuestionAnswer label="내 질문" />
-        </Tab>
+      <Content className="questionContent">
+        <div className="contentTab">
+          <Tab onClick={() => {}} position="left">
+            <QuestionApply label="문의" />
+            <QuestionAnswer label="내 질문" />
+          </Tab>
+        </div>
       </Content>
     </Container>
   );

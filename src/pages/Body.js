@@ -1,9 +1,8 @@
-import Recommend from "../components/event/recommend";
-
+import Question from "../components/question/question";
 export default function Body() {
   return (
     <div id="body">
-      <Recommend />
+      <Question />
     </div>
   );
 }

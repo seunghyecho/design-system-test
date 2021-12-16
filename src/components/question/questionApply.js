@@ -3,12 +3,14 @@ import styled from "styled-components";
 const Container = styled.div``;
 const Content = styled.div`
   margin-top: 30px;
-  textarea {
-    width: 100%;
-    min-height: 380px;
+  .contentTextarea {
+    textarea {
+      width: 100%;
+      min-height: 380px;
+    }
   }
 
-  .content-applyBtn {
+  .contentBtn {
     margin-top: 30px;
     width: 100%;
 
@@ -24,13 +26,13 @@ const Content = styled.div`
 const Form = styled.form``;
 export default function QuestionApply({ label }) {
   return (
-    <Container id="QuestionApply" label={label}>
-      <Content className="QuestionApplyContent">
+    <Container id="questionApply" label={label}>
+      <Content className="questionApplyContent">
         <Form>
-          <div className="content-textarea">
+          <div className="contentTextarea">
             <Textarea onChange={() => {}} row="10" cols="10" />
           </div>
-          <div className="content-applyBtn">
+          <div className="contentBtn">
             <Button appearance="borderRadius5" label="쿠폰등록" />
           </div>
         </Form>
