@@ -1,6 +1,7 @@
 import { Button, UserCondition, Menu, Grid } from "@flescompany/design-system";
 import styled from "styled-components";
 import noImage from "../../assets/no_image.jpeg";
+import { useFadeIn } from "../../hooks/useFadeIn";
 
 const Container = styled.div`
   position: fixed;
@@ -12,8 +13,11 @@ const Container = styled.div`
   left: 0;
   bottom: 0;
   right: 0;
+  // min-width: 300px;
+  // width: min-content;
   width: 100vw;
   padding: 30px 15px 0;
+  opacity: 1;
 `;
 const Header = styled.div`
   .d-flex {
@@ -74,9 +78,11 @@ const Content = styled.div`
     }
   }
 `;
-export default function SideMenu() {
+export default function SideMenu({ onClick }) {
+  const FadeInAll = useFadeIn(0.5, 1);
+
   return (
-    <Container id="sideMenu">
+    <Container id="sideMenu" onClick={onClick} {...FadeInAll}>
       <Header className="menuHeader">
         <div className="headerCondition">
           <div className="d-flex user">

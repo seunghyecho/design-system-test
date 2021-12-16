@@ -14,22 +14,26 @@ import cashOn from "../assets/on_cash.svg";
 import settingsOn from "../assets/on_settings.svg";
 import wishOn from "../assets/on_wish.svg";
 import SideMenu from "../components/menu/sideMenu.js";
+import SearchContents from "../components/search/searchContents.js";
 
 export default function Layout() {
-  const [open, setOpen] = useState(false);
-  const handleMenu = (e) => {
-    setOpen(!open);
-    console.log(setOpen);
+  const [openMenu, setOpenMenu] = useState(false);
+  const handleOpenMenu = () => {
+    setOpenMenu(!openMenu);
   };
+  const handleCloseMenu = () => {
+    setOpenMenu(false);
+  };
+
   return (
     <>
       <Header
         titleUrl={tLogo}
-        onMenu={handleMenu}
-        onSearch={() => {}}
+        onMenu={handleOpenMenu}
+        onSearch={() => console.log("go searchContents")}
         onCreateAccount={() => {}}
       />
-      {open ? <SideMenu /> : null}
+      {openMenu ? <SideMenu onClick={handleCloseMenu} /> : null}
       <Body />
       <Footer
         footers={[
