@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Header, Footer } from "@flescompany/design-system";
-import Body from "./Body.js";
+import Body from "./body.js";
 import SideMenu from "../components/menu/sideMenu.js";
 // img
 import tLogo from "../assets/t_logo.png";

@@ -1,7 +1,9 @@
-import { Button, UserCondition, Menu, Grid } from "@flescompany/design-system";
 import { useState } from "react";
+import { Button, UserCondition, Menu, Grid } from "@flescompany/design-system";
 import styled from "styled-components";
 import noImage from "../../assets/no_image.jpeg";
+import Auth from "../auth/auth";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   position: fixed;
@@ -81,64 +83,72 @@ const Content = styled.div`
     }
   }
 `;
-export default function SideMenu({ onClick }) {
-  const [state, setState] = useState(false);
+export default function SideMenu({ user, onClick, authenticated }) {
+  const { email, password, name } = user || {};
 
   return (
     <Container id="sideMenu" onClick={onClick}>
       <Header className="menuHeader">
-        {/* logIn */}
-        <div className="headerCondition userLogin">
-          <div className="d-flex user">
-            <UserCondition
-              color="#aaaaaa"
-              subTitle="1999.11.11"
-              title="홍길동"
-            />
-            <Button
-              appearance="borderRadius5"
-              backgroundColor="#f9f9f9"
-              color="#222222"
-              label="정보변경"
-              onClick={() => {
-                console.log("click info");
-              }}
-            />
-          </div>
-          <div className="d-flex coin">
-            <UserCondition color="#222222" subTitle="COIN" title="9000" />
-            <Button
-              appearance="borderRadius5"
-              backgroundColor="#f9f9f9"
-              color="#222222"
-              label="코인충전"
-              onClick={() => {
-                console.log("click coin");
-              }}
-            />
-          </div>
-        </div>
-        {/* //logIn */}
-        {/* logOut */}
-        <div className="headerCondition userLogout">
-          <div className="d-flex user">
-            <UserCondition
-              color="#aaaaaa"
-              subTitle=""
-              title="로그인이 필요합니다"
-            />
-            <Button
-              appearance="borderRadius5"
-              backgroundColor="#ffb74b"
-              color="#ffffff"
-              label="로그인"
-              onClick={() => {
-                console.log("click login");
-              }}
-            />
-          </div>
-        </div>
-        {/* //logOut */}
+        {authenticated ? (
+          <>
+            <div
+              className="headerCondition userLogin"
+              authenticated={authenticated}
+            >
+              <div className="d-flex user">
+                <UserCondition
+                  color="#aaaaaa"
+                  subTitle="1999.11.11"
+                  title={name}
+                />
+                <Button
+                  appearance="borderRadius5"
+                  backgroundColor="#f9f9f9"
+                  color="#222222"
+                  label="정보변경"
+                  onClick={() => {
+                    console.log("click info");
+                  }}
+                />
+              </div>
+              <div className="d-flex coin">
+                <UserCondition color="#222222" subTitle="COIN" title="9000" />
+                <Button
+                  appearance="borderRadius5"
+                  backgroundColor="#f9f9f9"
+                  color="#222222"
+                  label="코인충전"
+                  onClick={() => {
+                    console.log("click coin");
+                  }}
+                />
+              </div>
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="headerCondition userLogout">
+              <div className="d-flex user">
+                <UserCondition
+                  color="#aaaaaa"
+                  subTitle=""
+                  title="로그인이 필요합니다"
+                />
+                <Link to="/login">
+                  <Button
+                    appearance="borderRadius5"
+                    backgroundColor="#ffb74b"
+                    color="#ffffff"
+                    label="로그인"
+                    onClick={() => {
+                      console.log("click login");
+                    }}
+                  />
+                </Link>
+              </div>
+            </div>
+          </>
+        )}
       </Header>
       <Content className="menuContent">
         <div className="contentCounsel">

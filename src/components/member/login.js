@@ -3,8 +3,8 @@ import {
   Button,
   SnsButtonGroup,
 } from "@flescompany/design-system";
-import axios from "axios";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { Redirect } from "react-router-dom";
 import styled from "styled-components";
 import logo from "../../assets/logo.png";
 
@@ -56,26 +56,32 @@ const Form = styled.form`
     }
   }
 `;
-export default function Login() {
+export default function Login({ authenticated, login, location }) {
   const [inputId, setInputId] = useState("");
   const [inputPw, setInputPw] = useState("");
+
   const handleInputId = (e) => {
     setInputId(e.target.value);
-    console.log(e.target.value);
   };
   const handleInputPw = (e) => {
     setInputPw(e.target.value);
-    console.log(e.target.value);
   };
+
   const onClickLogin = () => {
-    console.log("click login");
+    console.log(login);
+    try {
+      login({ inputId, inputPw });
+    } catch (e) {
+      alert("Failed to login");
+      setInputId("");
+      setInputPw("");
+    }
   };
-  useEffect(() => {
-    axios
-      .get("http://jsonplaceholder.typicode.com/users")
-      .then((res) => console.log(res))
-      .catch();
-  }, []);
+
+  const { from } = location.state || { from: { pathname: "/" } };
+  console.log(authenticated);
+  if (authenticated) return <Redirect to={from} />;
+
   return (
     <Container id="login">
       <Header className="loginHeader">
@@ -92,6 +98,7 @@ export default function Login() {
               placeholder="user@email.com"
               inputValue={inputId}
               onChange={handleInputId}
+              maxLength="22"
             />
           </div>
           <div className="contentPw">
@@ -99,10 +106,11 @@ export default function Login() {
               error=""
               id="password"
               label=""
-              placeholder="12345"
+              placeholder="123"
               type="password"
               inputValue={inputPw}
               onChange={handleInputPw}
+              maxLength="3"
             />
           </div>
           <div className="contentBtn">
