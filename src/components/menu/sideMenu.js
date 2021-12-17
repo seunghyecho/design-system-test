@@ -1,7 +1,7 @@
 import { Button, UserCondition, Menu, Grid } from "@flescompany/design-system";
+import { useState } from "react";
 import styled from "styled-components";
 import noImage from "../../assets/no_image.jpeg";
-import { useFadeIn } from "../../hooks/useFadeIn";
 
 const Container = styled.div`
   position: fixed;
@@ -15,7 +15,7 @@ const Container = styled.div`
   right: 0;
   // min-width: 300px;
   // width: min-content;
-  width: 100vw;
+  // width: 100vw;
   padding: 30px 15px 0;
   opacity: 1;
 `;
@@ -33,7 +33,10 @@ const Header = styled.div`
     }
   }
   .headerCondition {
+    min-height: 78px;
+    height: min-content;
     button {
+      width: 80px;
       font-size: 12px;
       font-weight: bold;
     }
@@ -79,12 +82,13 @@ const Content = styled.div`
   }
 `;
 export default function SideMenu({ onClick }) {
-  const FadeInAll = useFadeIn(0.5, 1);
+  const [state, setState] = useState(false);
 
   return (
-    <Container id="sideMenu" onClick={onClick} {...FadeInAll}>
+    <Container id="sideMenu" onClick={onClick}>
       <Header className="menuHeader">
-        <div className="headerCondition">
+        {/* logIn */}
+        <div className="headerCondition userLogin">
           <div className="d-flex user">
             <UserCondition
               color="#aaaaaa"
@@ -114,6 +118,27 @@ export default function SideMenu({ onClick }) {
             />
           </div>
         </div>
+        {/* //logIn */}
+        {/* logOut */}
+        <div className="headerCondition userLogout">
+          <div className="d-flex user">
+            <UserCondition
+              color="#aaaaaa"
+              subTitle=""
+              title="로그인이 필요합니다"
+            />
+            <Button
+              appearance="borderRadius5"
+              backgroundColor="#ffb74b"
+              color="#ffffff"
+              label="로그인"
+              onClick={() => {
+                console.log("click login");
+              }}
+            />
+          </div>
+        </div>
+        {/* //logOut */}
       </Header>
       <Content className="menuContent">
         <div className="contentCounsel">

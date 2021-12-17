@@ -1,6 +1,5 @@
 import {
   BannerInTextAndImg,
-  Card,
   CardNumber,
   CheckedValue,
   ButtonGroup,
