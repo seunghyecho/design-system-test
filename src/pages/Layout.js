@@ -32,6 +32,7 @@ export default function Layout() {
   return (
     <div id="layout">
       <Header
+        href="/"
         titleUrl={tLogo}
         onMenu={handleOpenMenu}
         onSearch={handleSearch}
