@@ -29,6 +29,9 @@ export default function Layout() {
   const handleSearch = () => {
     window.location.href = "/search";
   };
+  const handleCreateAccount = () => {
+    window.location.href = "/user";
+  };
   return (
     <div id="layout">
       <Header
@@ -36,7 +39,7 @@ export default function Layout() {
         titleUrl={tLogo}
         onMenu={handleOpenMenu}
         onSearch={handleSearch}
-        onCreateAccount={() => console.log("go profile")}
+        onCreateAccount={handleCreateAccount}
       />
       {openMenu ? <SideMenu onClick={handleCloseMenu} /> : null}
       <Body id="body">
