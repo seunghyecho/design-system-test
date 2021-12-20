@@ -9,7 +9,17 @@ import styled from "styled-components";
 import logo from "../../assets/logo.png";
 
 const Container = styled.div`
-  padding: 70px 0;
+  position: fixed;
+  z-index: 9999;
+  background: #fff;
+  height: 100vh;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 70px 15px 0;
+  opacity: 1;
 `;
 const Header = styled.div`
   text-align: center;

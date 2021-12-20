@@ -1,8 +1,7 @@
 import { useState } from "react";
+import Router from "../routes/router";
 import { Header, Footer } from "@flescompany/design-system";
-import Body from "./body.js";
 import SideMenu from "../components/menu/sideMenu.js";
-// img
 import tLogo from "../assets/t_logo.png";
 import homeOff from "../assets/off_home.svg";
 import userOff from "../assets/off_user.svg";
@@ -14,7 +13,11 @@ import userOn from "../assets/on_user.svg";
 import cashOn from "../assets/on_cash.svg";
 import settingsOn from "../assets/on_settings.svg";
 import wishOn from "../assets/on_wish.svg";
-
+import styled from "styled-components";
+const Body = styled.div`
+  padding-top: 60px;
+  padding-bottom: 60px;
+`;
 export default function Layout() {
   const [openMenu, setOpenMenu] = useState(false);
   const handleOpenMenu = () => {
@@ -23,9 +26,8 @@ export default function Layout() {
   const handleCloseMenu = () => {
     setOpenMenu(false);
   };
-
   return (
-    <>
+    <div id="layout">
       <Header
         titleUrl={tLogo}
         onMenu={handleOpenMenu}
@@ -33,7 +35,9 @@ export default function Layout() {
         onCreateAccount={() => console.log("go profile")}
       />
       {openMenu ? <SideMenu onClick={handleCloseMenu} /> : null}
-      <Body />
+      <Body id="body">
+        <Router />
+      </Body>
       <Footer
         footers={[
           {
@@ -42,7 +46,7 @@ export default function Layout() {
               on: `${homeOn}`,
             },
             title: "홈",
-            href: "/layout",
+            href: "/",
           },
           {
             img: {
@@ -78,6 +82,6 @@ export default function Layout() {
           },
         ]}
       />
-    </>
+    </div>
   );
 }
