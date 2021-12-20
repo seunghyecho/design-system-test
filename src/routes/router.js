@@ -10,6 +10,7 @@ import Auth from "../components/auth/auth";
 import { AuthRoute } from "../components/auth/authRoute";
 import SideMenu from "../components/menu/sideMenu";
 import DailyFortune from "../components/home/dailyFortune";
+import SearchContents from "../components/search/searchContents";
 export default function Router() {
   const [user, setUser] = useState(null);
   const authenticated = user != null;
@@ -22,6 +23,7 @@ export default function Router() {
         <Route path="/cash" component={CashCharge}></Route>
         <Route path="/dailyfortune" component={DailyFortune}></Route>
         <Route path="/set" component={Set}></Route>
+        <Route path="/search" component={SearchContents}></Route>
         <Route
           path="/login"
           render={(props) => (

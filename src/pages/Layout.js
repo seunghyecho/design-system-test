@@ -26,12 +26,15 @@ export default function Layout() {
   const handleCloseMenu = () => {
     setOpenMenu(false);
   };
+  const handleSearch = () => {
+    window.location.href = "/search";
+  };
   return (
     <div id="layout">
       <Header
         titleUrl={tLogo}
         onMenu={handleOpenMenu}
-        onSearch={() => console.log("go searchContents")}
+        onSearch={handleSearch}
         onCreateAccount={() => console.log("go profile")}
       />
       {openMenu ? <SideMenu onClick={handleCloseMenu} /> : null}
