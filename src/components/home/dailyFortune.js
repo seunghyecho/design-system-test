@@ -1,4 +1,10 @@
-import { BannerInText, CardWithImg, Card } from "@flescompany/design-system";
+import {
+  BannerInText,
+  CardWithImg,
+  Card,
+  Grid,
+  CardWithGrid,
+} from "@flescompany/design-system";
 import styled from "styled-components";
 import MenIcon from "../../assets/icon_user_men.png";
 import WomenIcon from "../../assets/icon_user_women.png";
@@ -61,6 +67,28 @@ const Content = styled.div`
     .cardTop {
       color: #ffb74b;
     }
+    .grid {
+      ul {
+        li {
+          background: transparent;
+
+          .gridContent {
+            p {
+              font-size: 14px;
+              letter-spacing: -0.14px;
+              color: #999;
+            }
+            span {
+              font-size: 18px;
+              font-weight: bold;
+              line-height: 1.78;
+              letter-spacing: -0.18px;
+              color: #222;
+            }
+          }
+        }
+      }
+    }
   }
 `;
 export default function DailyFortune() {
@@ -109,6 +137,24 @@ export default function DailyFortune() {
             cardToptitle="Card Top Title"
             position="left"
             textAlign="left"
+          />
+          <CardWithGrid
+            width="3"
+            title="Card Top Title"
+            grids={[
+              {
+                name: "검정색",
+                title: "행운의 색상",
+              },
+              {
+                name: "검정색",
+                title: "행운의 색상",
+              },
+              {
+                name: "검정색",
+                title: "행운의 색상",
+              },
+            ]}
           />
         </div>
       </Content>
