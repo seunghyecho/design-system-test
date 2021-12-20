@@ -11,6 +11,7 @@ import Set from "./components/set/set";
 import Auth from "./components/auth/auth";
 import { AuthRoute } from "./components/auth/authRoute";
 import SideMenu from "./components/menu/sideMenu";
+import DailyFortune from "./components/home/dailyFortune";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -40,6 +41,7 @@ function App() {
             render={(props) => <SideMenu user={user} {...props} />}
           />
           <Route path="/cash" component={CashCharge}></Route>
+          <Route path="/dailyfortune" component={DailyFortune}></Route>
           <Route path="/set" component={Set}></Route>
         </div>
       </Router>

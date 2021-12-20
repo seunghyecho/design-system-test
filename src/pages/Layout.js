@@ -42,6 +42,7 @@ export default function Layout() {
               on: `${homeOn}`,
             },
             title: "홈",
+            href: "/layout",
           },
           {
             img: {
@@ -49,6 +50,7 @@ export default function Layout() {
               on: `${userOn}`,
             },
             title: "프로필",
+            href: "/user",
           },
           {
             img: {
@@ -56,6 +58,7 @@ export default function Layout() {
               off: `${cashOff}`,
             },
             title: "코인충전",
+            href: "/cash",
           },
           {
             img: {
@@ -63,6 +66,7 @@ export default function Layout() {
               off: `${settingsOff}`,
             },
             title: "환경설정",
+            href: "/set",
           },
           {
             img: {
@@ -70,6 +74,7 @@ export default function Layout() {
               off: `${wishOff}`,
             },
             title: "오늘소원",
+            href: "/dailyfortune",
           },
         ]}
       />

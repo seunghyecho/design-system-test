@@ -6,6 +6,7 @@ import {
   Grid,
   ListThemeHighlight,
   ListThemeTag,
+  GridImg,
 } from "@flescompany/design-system";
 import styled from "styled-components";
 import carousel01 from "../../assets/carousel01.png";
@@ -117,7 +118,7 @@ export default function Home() {
           />
         </div>
         <div className="contentLuckMenu">
-          <Grid
+          <GridImg
             grids={[
               {
                 url: `${mainFree}`,
