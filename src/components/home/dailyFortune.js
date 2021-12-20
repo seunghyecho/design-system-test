@@ -64,8 +64,12 @@ const Content = styled.div`
   }
 `;
 export default function DailyFortune() {
-  const date = new Date();
-  const localDate = date.toLocaleString();
+  function getDateFormat(date) {
+    const month = date.getMonth() + 1;
+    const day = date.getDate();
+    return month + "월 " + day + "일";
+  }
+  var date = getDateFormat(new Date());
   return (
     <Container id="dailyFortune">
       <Header className="dailyFortuneHeader">
@@ -74,7 +78,7 @@ export default function DailyFortune() {
             backgroundColor="#ffb74b"
             lowerTitle="자신의 실수를 인정하고 빨리 고쳐야합니다."
             title="오늘의 운세"
-            upperTitle={localDate}
+            upperTitle={date}
           />
         </div>
       </Header>
