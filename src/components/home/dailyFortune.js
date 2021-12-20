@@ -1,6 +1,7 @@
 import { BannerInText, CardWithImg, Card } from "@flescompany/design-system";
 import styled from "styled-components";
-import noImage from "../../assets/no_image.jpeg";
+import MenIcon from "../../assets/icon_user_men.png";
+import WomenIcon from "../../assets/icon_user_women.png";
 
 const Container = styled.div``;
 const Header = styled.div`
@@ -76,7 +77,7 @@ export default function DailyFortune() {
           <CardWithImg
             avatar={{
               alt: "Men",
-              src: `${noImage}`,
+              src: `${MenIcon}`,
             }}
             cardMidTitle="홍길동"
             cardMidcontent="1999.09.09(양력) / 14시 20분 / 미혼"
