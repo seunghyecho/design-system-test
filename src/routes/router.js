@@ -19,6 +19,7 @@ export default function Router() {
     <div>
       <Switch>
         <Route exact={true} path="/" component={Home}></Route>
+        <Route path="/intro" component={Intro}></Route>
         <Route path="/cash" component={CashCharge}></Route>
         <Route path="/dailyfortune" component={DailyFortune}></Route>
         <Route path="/set" component={Set}></Route>

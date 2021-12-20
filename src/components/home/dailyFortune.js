@@ -2,7 +2,6 @@ import {
   BannerInText,
   CardWithImg,
   Card,
-  Grid,
   CardWithGrid,
 } from "@flescompany/design-system";
 import styled from "styled-components";

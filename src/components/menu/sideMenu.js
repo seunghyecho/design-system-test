@@ -1,8 +1,6 @@
-import { useState } from "react";
 import { Button, UserCondition, Menu, Grid } from "@flescompany/design-system";
 import styled from "styled-components";
 import noImage from "../../assets/no_image.jpeg";
-import Auth from "../auth/auth";
 import { Link } from "react-router-dom";
 
 const Container = styled.div`
@@ -83,9 +81,7 @@ const Content = styled.div`
     }
   }
 `;
-export default function SideMenu({ user, onClick, authenticated }) {
-  const { email, password, name } = user || {};
-
+export default function SideMenu({ onClick, authenticated }) {
   return (
     <Container id="sideMenu" onClick={onClick}>
       <Header className="menuHeader">
@@ -99,7 +95,7 @@ export default function SideMenu({ user, onClick, authenticated }) {
                 <UserCondition
                   color="#aaaaaa"
                   subTitle="1999.11.11"
-                  title={name}
+                  title="홍길동"
                 />
                 <Button
                   appearance="borderRadius5"
