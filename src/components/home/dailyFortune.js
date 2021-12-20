@@ -10,6 +10,12 @@ const Header = styled.div`
     .bannerInText {
       padding: 0 35px;
       color: white;
+
+      .titleArea {
+        > * {
+          margin: 10px 0;
+        }
+      }
     }
   }
 `;
