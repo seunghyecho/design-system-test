@@ -81,7 +81,8 @@ const Content = styled.div`
     }
   }
 `;
-export default function SideMenu({ onClick, authenticated }) {
+export default function SideMenu({ authenticated, onClick, user }) {
+  const { name } = user || {};
   return (
     <Container id="sideMenu" onClick={onClick}>
       <Header className="menuHeader">
@@ -95,7 +96,7 @@ export default function SideMenu({ onClick, authenticated }) {
                 <UserCondition
                   color="#aaaaaa"
                   subTitle="1999.11.11"
-                  title="홍길동"
+                  title={name}
                 />
                 <Button
                   appearance="borderRadius5"

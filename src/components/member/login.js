@@ -3,6 +3,7 @@ import {
   Button,
   SnsButtonGroup,
 } from "@flescompany/design-system";
+import axios from "axios";
 import { useState } from "react";
 import { Redirect } from "react-router-dom";
 import styled from "styled-components";
@@ -66,26 +67,53 @@ const Form = styled.form`
     }
   }
 `;
+
 export default function Login({ authenticated, login, location }) {
-  const [inputId, setInputId] = useState("");
-  const [inputPw, setInputPw] = useState("");
+  const [id, setId] = useState("");
+  const [pwd, setPwd] = useState("");
 
-  const handleInputId = (e) => {
-    setInputId(e.target.value);
+  const handleId = (e) => {
+    setId(e.target.value);
   };
-  const handleInputPw = (e) => {
-    setInputPw(e.target.value);
+  const handlePwd = (e) => {
+    setPwd(e.target.value);
   };
+  const onLogin = (e) => {
+    e.preventDefault();
 
-  const onClickLogin = () => {
-    console.log(login);
-    try {
-      login({ inputId, inputPw });
-    } catch (e) {
-      alert("Failed to login");
-      setInputId("");
-      setInputPw("");
+    if (id === "" || pwd === "") {
+      window.alert("아이디와 비밀번호를 입력해주세요.");
+      return;
     }
+
+    axios
+      .post("http://localhost:4000/users", {
+        email: id,
+        password: pwd,
+      })
+      .then(function (res) {
+        console.log(res);
+        console.log("res.data.email :: ", res.data.email);
+        if (res.data.email === undefined) {
+          alert("입력하신 id 가 일치하지 않습니다.");
+        } else if (res.data.email === null) {
+          console.log(
+            "======================",
+            "입력하신 비밀번호 가 일치하지 않습니다."
+          );
+          alert("입력하신 비밀번호 가 일치하지 않습니다.");
+        } else if (res.data.email === id) {
+          console.log("======================", "로그인 성공");
+          sessionStorage.setItem("email", pwd);
+        }
+        document.location.href = "#";
+      })
+      .catch(function (error) {
+        console.error(error);
+      })
+      .then(function (e) {
+        console.log(e);
+      });
   };
 
   const { from } = location.state || { from: { pathname: "/" } };
@@ -105,9 +133,9 @@ export default function Login({ authenticated, login, location }) {
               error=""
               id="userid"
               label=""
-              placeholder="user@email.com"
-              inputValue={inputId}
-              onChange={handleInputId}
+              placeholder="kim@test.com"
+              inputValue={id}
+              onChange={handleId}
               maxLength="22"
             />
           </div>
@@ -118,8 +146,8 @@ export default function Login({ authenticated, login, location }) {
               label=""
               placeholder="123"
               type="password"
-              inputValue={inputPw}
-              onChange={handleInputPw}
+              inputValue={pwd}
+              onChange={handlePwd}
               maxLength="3"
             />
           </div>
@@ -127,7 +155,7 @@ export default function Login({ authenticated, login, location }) {
             <Button
               appearance="borderRadius5"
               label="로그인"
-              onClick={onClickLogin}
+              onClick={onLogin}
             />
           </div>
         </Form>

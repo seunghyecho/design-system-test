@@ -11,10 +11,12 @@ import { AuthRoute } from "../components/auth/authRoute";
 import SideMenu from "../components/menu/sideMenu";
 import DailyFortune from "../components/home/dailyFortune";
 import SearchContents from "../components/search/searchContents";
+
 export default function Router() {
   const [user, setUser] = useState(null);
   const authenticated = user != null;
   const login = ({ email, password }) => setUser(Auth({ email, password }));
+
   return (
     <div>
       <Switch>
