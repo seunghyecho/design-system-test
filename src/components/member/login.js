@@ -102,23 +102,14 @@ export default function Login({ authenticated, login, location }) {
             "입력하신 비밀번호 가 일치하지 않습니다."
           );
           alert("입력하신 비밀번호 가 일치하지 않습니다.");
-        } else if (res.data.email === id) {
+        } else if (res.data.email === id && res.data.password === pwd) {
           console.log("======================", "로그인 성공");
-          sessionStorage.setItem("email", pwd);
+          sessionStorage.setItem(id, pwd);
         }
-        document.location.href = "#";
+        document.location.href = "/";
       })
-      .catch(function (error) {
-        console.error(error);
-      })
-      .then(function (e) {
-        console.log(e);
-      });
+      .catch(function (error) {});
   };
-
-  const { from } = location.state || { from: { pathname: "/" } };
-  console.log(authenticated);
-  if (authenticated) return <Redirect to={from} />;
 
   return (
     <Container id="login">
