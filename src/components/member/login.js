@@ -3,9 +3,7 @@ import {
   Button,
   SnsButtonGroup,
 } from "@flescompany/design-system";
-import axios from "axios";
 import { useState } from "react";
-import { Redirect } from "react-router-dom";
 import styled from "styled-components";
 import logo from "../../assets/logo.png";
 
@@ -86,29 +84,25 @@ export default function Login({ authenticated, login, location }) {
       return;
     }
 
-    axios
-      .post("http://localhost:4000/users", {
+    fetch(`http://localhost:4000/users`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
         email: id,
         password: pwd,
-      })
-      .then(function (res) {
+      }),
+    })
+      .then((res) => res.json())
+      .then((res) => {
         console.log(res);
-        console.log("res.data.email :: ", res.data.email);
-        if (res.data.email === undefined) {
-          alert("입력하신 id 가 일치하지 않습니다.");
-        } else if (res.data.email === null) {
-          console.log(
-            "======================",
-            "입력하신 비밀번호 가 일치하지 않습니다."
-          );
-          alert("입력하신 비밀번호 가 일치하지 않습니다.");
-        } else if (res.data.email === id && res.data.password === pwd) {
-          console.log("======================", "로그인 성공");
-          sessionStorage.setItem(id, pwd);
+        if (res.email === id && res.password === pwd) {
+          console.log("로그인 성공");
+          localStorage.setItem(id, pwd);
+          document.location.href = "#/";
         }
-        document.location.href = "/";
-      })
-      .catch(function (error) {});
+      });
   };
 
   return (
